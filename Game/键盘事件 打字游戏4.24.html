@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打字游戏</title>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+*{
+    padding: 0;
+    margin: 0;
+}
+        .scene {
+            width: 1000px;
+            height:100%;
+            background: #ccc;
+            margin: 0 auto;
+        }
+
+        .main {
+            width: 800px;
+            height: 100%;
+            float: left;
+            background: #da859b;
+            position: relative;
+        }
+
+        .scol {
+            width: 200px;
+            height: 100%;
+            float: left;
+            background: #9a90bc;
+        }
+
+        .box {
+            width: 100px;
+            height: 50px;
+            background: white;
+            margin: 0 auto;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .name, .state, .life {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .scor {
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            background: #ff9e54;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+        }
+
+        .litter {
+            width: 80px;
+            height: 80px;
+           /* border: 1px solid red;*/
+            position: absolute;
+            background-size:100% 100%;
+        }
+
+        .btn {
+            width: 90px;
+            height: 30px;
+            margin: 0 auto;
+            background: #ff9e54;
+            margin-top: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="scene">
+    <div class="main">
+
+    </div>
+    <div class="scol">
+        <div class="box">
+            <div class="name">得分</div>
+            <div class="scor">0</div>
+        </div>
+        <div class="box">
+            <div class="state">关卡</div>
+            <div class="scor states">1</div>
+        </div>
+        <div class="box">
+            <div class="life">生命值</div>
+            <div class="scor lifes">5</div>
+        </div>
+        <div class="btn start">开始</div>
+        <div class="btn pause">暂停</div>
+    </div>
+</div>
+</body>
+<!--<script>
+    //1.创建字母 （创建div标签 名字 添加到main）do while随机字母 随机位置do white
+    var main=document.querySelector(".main")
+    var obj={}
+    function creatLitter() {
+
+        var div=document.createElement("div")//创建div标签
+        div.className="litter";//添加名字
+        do{                             //随机字母
+            var bj=Math.floor(Math.random()*26+65) //65~90
+            var bjz=String.fromCharCode(bj)
+        }while(obj[bjz])
+        obj[bjz]={}
+        div.innerHTML=bjz;
+        do{
+            var le=Math.random()*720
+        }while(check(le))
+        div.style.left=le+"px";
+        var to=-Math.random()*200
+        div.style.top=to+"px";
+        obj[bjz]={left:le,top:to,el:div}
+        main.appendChild(div)//添加到main中
+    }
+    function play() {
+        for(var i=0;i<3;i++){
+            creatLitter();
+        }
+    }
+    play()
+    function check(left) {
+        console.log(left)
+        for(var i in obj){
+            if(left>obj[i].left-80&&left<obj[i].left+80){
+                return true
+            }
+        }
+    }
+        setInterval(function () { //滑落
+            for(var i in obj){
+                var t=obj[i].top
+                t+=5;
+                obj[i].top=t
+                obj[i].el.style.top=t+"px";
+            }
+        },50)
+        document.onkeydown=function (e) {
+            var keycode=e.keyCode;
+            var l=String.fromCharCode(keycode)
+            if(obj[l]){
+                main.removeChild(obj[l].el)
+                delete obj[l];
+                creatLitter()
+            }
+        }
+</script>-->
+<!--面向对象 封装 -->
+<script>
+    var Start = document.querySelector(".start")
+    var pause = document.querySelector(".pause")
+    var main = document.querySelector(".main")
+    var scor = document.querySelector(".scor")
+    var states = document.querySelector(".states")
+    var lifes = document.querySelector(".lifes")
+    class game {
+        constructor(main, scor, states, lifes) {//指定创建对象原型的函数
+            this.num = 3;
+            this.obj = {}
+            this.main = main;
+            this.scorele = scor;
+            this.newscor = 0;
+            this.stateele = states;
+            this.state = 1;
+            this.speed = 5;
+            this.lifesele = lifes;
+            this.life = 5;
+            this.height=window.innerHeight;
+            this.Startcontol=true;
+            this.bestscor=localStorage.bestscor?JSON.parse(localStorage.bestscor):[]
+        }
+        _creatlitter() {
+            var div = document.createElement("div")
+            div.className = "litter";
+            do {
+                var gh = Math.floor(Math.random() * 26 + 65)
+                var zimu = String.fromCharCode(gh)
+            } while (this.obj[zimu])
+            div.style.backgroundImage= "url(img/"+zimu+".png)";
+            this.obj[zimu] = {}
+            do {
+                var le = Math.random() * 720;
+            } while (this._check(le))
+            div.style.left = le + "px";
+            var to = -Math.random() * 200;
+            div.style.top = to + "px";
+            this.main.appendChild(div)
+            this.obj[zimu] = {left: le, top: to, el: div}
+        }
+        play() {
+            for (var i = 0; i < this.num; i++) {
+                this._creatlitter()
+            }
+            this.start()
+            this.move()
+            tt.Startcontol=false;
+        }
+        _check(left) {
+            for (var i in this.obj) {
+                if (left > this.obj[i].left - 80 && left < this.obj[i].left + 80) {
+                    return true;
+                }
+            }
+        }
+        start() {
+           this.st=setInterval(function () {
+                for (var i in this.obj) {
+                    var t = this.obj[i].top;
+                    t += this.speed
+                    this.obj[i].top = t;
+                    this.obj[i].el.style.top = t + "px";
+                    if(t>this.height){
+                        this.life--;
+                        this.lifesele.innerHTML=this.life;
+                        this.main.removeChild(this.obj[i].el)
+                        delete this.obj[i]
+                        this._creatlitter()
+                        if(this.life==0){
+                            this._stop()
+                            return;
+                        }
+                    }
+                }
+            }.bind(this), 50)
+
+        }
+        _stop(){
+            alert(`游戏结束得分为${this.newscor}`)
+            if(this.newscor<this.bestscor){
+             console.log(`最高得分为${this.bestscor}`)
+             console.log(`当前得分为${this.newscor}`)
+             }else{
+             console.log(`最高得分为${this.newscor}`)
+             console.log(`当前得分为${this.newscor}`)
+             localStorage.bestscor=this.newscor;
+             }
+        /*    if(this.bestscor.length<3||(this.bestscor.length>=3&&this.newscor>this.bestscor[2].newscor)){
+                var player= prompt("请输入名字")
+                this.bestscor.push({player,newscor:this.newscor})
+                this.bestscor.sort(function (a,b) {
+                   if(a.newscor>b.newscor){
+                        return -1;
+                   }else{
+                       return 1;
+                   }
+               })
+                if(this.bestscor.length>3){
+                    this.bestscor.pop()
+                }
+                localStorage.bastscor=JSON.stringify(this.bestscor)
+            }*/
+            console.table(this.bestscor)
+            this.main.innerHTML="";
+            this.obj={}
+            this.speed=5;
+            this.newscor=0;
+            this.scorele.innerHTML=this.newscor;
+            this.state=1;
+            this.stateele.innerHTML=this.state
+            this.life=5;
+            this.lifesele.innerHTML=this.life;
+            this.Startcontol=true;
+            clearInterval(this.st)
+        }
+        pause(){
+            clearInterval(this.st)
+            document.onkeydown=null
+        }
+        replay(){
+            this.start()
+            this.move()
+        }
+        move() {
+            document.onkeydown = function (e) {
+                var on = e.keyCode;
+                var mm = String.fromCharCode(on)
+                if (this.obj[mm]) {
+                    this.main.removeChild(this.obj[mm].el)
+                    delete this.obj[mm]
+                    this.newscor++;
+                    this.scorele.innerHTML = this.newscor;
+                    this._creatlitter();
+                    if (this.newscor % 10 == 0) {
+                        this._state()
+                    }
+                }
+            }.bind(this)
+        }
+        _state() {
+            this.state++;
+            this.stateele.innerHTML = this.state;
+            if (this.state <= 2) {
+                this._creatlitter()
+            } else {
+                this.speed++;
+            }
+        }
+    }
+    var tt = new game(main, scor, states, lifes);
+    Start.onclick = function () {
+        if(tt.Startcontol){
+            tt.play();
+
+        }
+    }
+    var flag=true;
+    pause.onclick=function () {
+        if(flag){
+            pause.innerHTML="继续";
+            tt.pause()
+        }else{
+            pause.innerHTML="继续";
+            tt.replay()
+        }
+        flag=!flag
+    }
+</script>
+</html>

@@ -1,0 +1,445 @@
+
+header{
+	width: 100%;
+	height: 32px;
+	background: #f7f7f7;
+}
+header .mainheader{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+header .mainheader .welcome,.login,.regist{
+	font-size: 12px;
+	color: #707f89;
+	font-family: "苹方";
+	line-height: 32px;
+	font-weight: 800;
+	
+}
+header .mainheader .welcome{
+	margin-left: 13px;
+}
+header .mainheader .regist{
+	float: right;
+	color: #4753e9;
+}
+header .mainheader .login{
+	float: right;
+	margin-right: 16px;
+}
+.logo{
+	width: 100%;
+	height: 120px;
+	background: white;
+	background: url('../img/qyjj-banner.png')center center no-repeat;
+	background-size: 100%;
+}
+.logo .main{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+.logo .main .lo-left{
+   width: 420px;
+   height: 60px;
+   margin-top: 30px;
+   float: left;
+}
+.logo .main .lo-left .logo{
+	width: 60px;
+	height: 60px;
+	float: left;
+
+}
+.logo .main .lo-left .name{
+	width: 100px;
+	overflow: hidden;
+	float: left;
+	margin-left: 15px;
+}
+.logo .main .lo-left .name .tuzhi{
+	font-size:22px;
+	font-family: "苹方";
+	font-weight: 600; 
+	color: #0f3145;
+
+}
+.logo .main .lo-left .name .edu{
+	font-size: 16px;
+	font-family: "苹方";
+	font-weight: 400; 
+	color: #48606e;
+
+
+}
+.logo .main .lo-left .desi{
+	font-size: 14px;
+	font-family: "苹方";
+	font-weight: 600;
+	color:#999999;
+	margin-left: 40px;
+	float: left;
+	height: 100%;
+	line-height: 60px;
+}
+.logo .main .lo-left .desi .desi-{
+	float: left;
+}
+.logo .main .lo-right{
+	width: 280px;
+	height: 50px;
+	float: right;
+	margin-top: 35px;
+}
+.logo .main .lo-right .call{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.logo .main .lo-right .please{
+	width: 210px;
+	font-size: 14px;
+	color: #707f89;
+	font-family: "苹方";
+	font-weight: 800;
+	margin-left: 17px;
+	float: left;
+
+}
+.logo .main .lo-right .tel{
+	width: 210px;
+	font-size: 22px;
+	color: #e8883a;
+	font-family: "苹方";
+	font-weight: 900;
+	margin-left: 17px;
+	float: left;
+
+}
+.content{
+	width: 100%;
+	overflow: hidden;
+	float: left;
+}
+.content .content-main{
+	width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.content .content-main .index{
+	width: 100%;
+	font-size: 17px;
+	color: #000;
+	font-weight: 600;
+	margin-top: 20px;
+	font-family: "苹方";
+	font-family: "苹方";
+}
+.content .content-main .index span{
+	color:#a8b6b6;
+}
+
+.content .content-main .top{
+	width: 100%;
+	height: 405px;
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+.content .content-main .top li{
+	width: 289px;
+	height: 100%;
+
+}
+.content .content-main .top li img{
+	width: 289px;
+	height: 296px;
+	float: left;
+	
+}
+.content .content-main .jieshao{
+	width: 169px;
+	height: 96px;
+	float: left;
+	margin-left: 60px;
+	border-bottom:  2px solid #ccc;
+}
+.content .content-main .jieshao p{
+	text-align: center;
+	font-family: "苹方"
+}
+.content .content-main .jieshao .p1{
+	font-size: 16px;
+	color: black;
+	font-weight: 600;
+	margin-top: 14px;
+}
+.content .content-main .jieshao .p2{
+	font-size: 14px;
+	color: black;
+	font-weight: 400;
+	margin-top: 6px;
+}
+.content .content-main .jieshao .p3{
+	font-size: 14px;
+	color: black;
+	font-weight: 400;
+	margin-top: 6px;
+}
+.content .content-main .bottom{
+	width: 100%;
+	height: 405px;
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+.content .content-main .bottom li{
+	width: 289px;
+	height: 100%;
+
+}
+.content .content-main .bottom li img{
+	width: 289px;
+	height: 296px;
+	float: left;
+	
+}
+
+nav{
+	width: 100%;
+	height: 95px;
+	margin: 0 auto;
+	background:rgba(33, 34, 50, 0.7);
+	position: relative;
+
+}
+ nav ul{
+	width: 1100px;
+	height: 100%;
+	margin: 0 auto;
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav ul li{
+	font-size: 24px;
+	/* font-family: "微软雅黑"; */
+	color: white;
+
+}
+nav .line{
+	width: 158px;
+	height: 6px;
+	background: #deab3d;
+	position: absolute;
+	bottom: 0;
+	left: 60%;
+
+}
+.suggition{
+	width: 100%;
+	height: 200px;
+	background: #eeeeee;
+	float: left;
+	margin-top: 100px;
+}
+.suggition .jianyi{
+	width:650px;
+	height:124px;
+	float: left;
+	margin-top: 38px;
+	margin-left: 26%;
+	
+}
+.suggition .jianyi .su-im{
+	width: 123px;
+	height: 123px;
+	float: left;
+}
+.suggition .jianyi .su-im img{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+.suggition .jianyi p{
+	float: left;
+	font-size: 18px;
+	margin-left: 16px;
+	margin-top: 11px;
+}
+.suggition .jianyi .fasong{
+	width: 510px;
+	height: 77px;
+	float: left;
+	margin-left: 16px;
+	border: 1px solid #dfdfdf;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: white;
+	margin-top: 14px;
+}
+.suggition .jianyi .fasong .fa1{
+	width: 88%;
+	float: left;
+	height: 100%;
+	border: 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.suggition .jianyi .fasong .fa2{
+	width: 12%;
+	float: right;
+	height: 100%;
+	border: 0px;
+	background: #3a47e8;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: white;
+	font-size: 21px;
+	font-family: "苹方";
+
+}
+footer{
+	width: 100%;
+	height: 437px;
+	background: url('../img/map.png') center center no-repeat;
+	position: relative;
+	float: left;
+}
+footer .zhe{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(55, 62, 99, 0.9);
+	
+}
+footer .fo-main{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	color: white;
+	position: relative;
+}
+footer .fo-main .fo-left{
+	width: 350px;
+	height: 389px;
+	float: left;
+	margin-top: 48px;
+	position: relative;
+}
+footer .fo-main .fo-left .logo1{
+	height: 75px;
+	float: left;
+}
+footer .fo-main .fo-left .logo1 img{
+	width: 75px;
+	height: 75px;
+	float: left;
+}
+footer .fo-main .fo-left .logo1 .tuzhi{
+	float: left;
+	width: 200px;
+	font-size: 22px;
+	margin-left: 20px;
+	font-weight: 600;
+	font-family: "苹方";
+	margin-top: 10px;
+}
+footer .fo-main .fo-left .logo1 .edu{
+	float: left;
+	font-size: 22px;
+	margin-left: 20px;
+}
+footer .fo-main .fo-left .guanzhu{
+	width: 251px;
+	height: 44px;
+	float: left;
+	line-height: 44px;
+	font-weight: 500;
+	font-size: 18px;
+	font-family: "苹方";
+	margin-top: 48px;
+}
+footer .fo-main .fo-left .guanzhu img{
+	width: 43px;
+	height: 43px;
+	float:right;
+	margin-left: 12px; 
+}
+footer .fo-main .fo-left .hezuo{
+	color: white;
+	font-size: 18px;
+	font-family: "苹方";
+	float:left;
+	margin-top: 50px;
+	line-height: 30px;
+	position: absolute;
+	bottom: 60px;
+}
+footer .fo-main dl{
+	float: right;
+	color: white;
+	font-size: 18px;
+	margin-top: 48px;
+	line-height: 32px;
+	font-family: "苹方";
+	margin-left: 146px;
+	text-align:left;
+}
+footer .fo-main dl dt{
+	color: white;
+	font-weight: 800;
+
+}
+footer .fo-main dl dd{
+	color: white;
+}
+footer .fo-main .fo-bottom{
+	width: 280px;
+	height: 50px;
+	position: absolute;
+	bottom: 60px;
+	right: 18%;
+}
+footer .fo-main .fo-bottom .call{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+footer .fo-main .fo-bottom .please{
+	width: 210px;
+	font-size: 14px;
+	color: white;
+	font-family: "苹方";
+	font-weight: 800;
+	margin-left: 17px;
+	float: left;
+
+}
+footer .fo-main .fo-bottom .tel{
+	width: 210px;
+	font-size: 24px;
+	color: white;
+	font-family: "苹方";
+	font-weight: 900;
+	margin-left: 17px;
+	float: left;
+
+}
+footer .fo-main .erwei{
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	bottom: 60px;
+	right: 0;
+}
