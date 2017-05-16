@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'iconfont';  /* project id 295355 */
+            src: url('//at.alicdn.com/t/font_sbptik97b3hdj9k9.eot');
+            src: url('//at.alicdn.com/t/font_sbptik97b3hdj9k9.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_sbptik97b3hdj9k9.woff') format('woff'),
+            url('//at.alicdn.com/t/font_sbptik97b3hdj9k9.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_sbptik97b3hdj9k9.svg#iconfont') format('svg');
+        }
+        body,html{
+            height: 100%;
+            margin:0;
+            padding: 0;
+            /*cursor: crosshair;*/
+        }
+        canvas {
+            background: #ccc;
+            /*display: block;*/
+            margin-left:300px;
+        }
+        .left{
+            width:250px ;
+            background: #ccc;
+            float: left;
+            height: 100%;
+        }
+        section{
+            width: 100%;
+            overflow: hidden;
+            font-size: 13px;
+            text-align: left;
+            font-family: 微软雅黑;
+            margin-top: 15px;
+        }
+        #select,style,input,#style{
+            float: right;
+            margin-right: 20px;
+        }
+        #select{
+            width: 100px;
+            height: 25px;
+        }
+        span{
+            font-family:  'iconfont';
+            margin-left: 5px;
+        }
+        lable{
+            margin-left: 30px;
+        }
+        input[type=button]{
+            width: 150px;
+            height: 30px;
+            background-color:#4eff38 ;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            margin: 15px auto;
+            display: block;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<canvas width="500px" height="500px">
+</canvas>
+<div class="left">
+    <section>
+        <lable>形状选项</lable>
+        <select name="" id="select">
+            <option value="rect">绘制矩形</option>
+            <option value="line">绘制直线</option>
+            <option value="circlein">绘制内切圆</option>
+            <option value="circleout">绘制外接圆</option>
+            <option value="circlecenter">绘制中心园</option>
+            <option value="poly">绘制多边形</option>
+            <option value="pen">铅笔</option>
+            <option value="eraser">橡皮擦</option>
+        </select>
+    </section>
+    <section>
+        <lable>选择颜色</lable>
+        <span>&#xe6f3;</span>
+        <input type="color"  id="color">
+    </section>
+    <section>
+        <lable>选择线宽</lable>
+        <input type="number" id="width" min="2" max="20">
+    </section>
+    <section>
+    <lable>选择方式</lable>
+    <select name="" id="style">
+        <option value="fill">fill</option>
+        <option value="stroke">stroke</option>
+
+    </select>
+    </section>
+    <section>
+        <lable for="">选择边数</lable>
+        <input type="number" id="side" value="3" min="3" max="12">
+    </section>
+    <section>
+        <input type="button" value="撤销" id="redo">
+    </section>
+    <section>
+        <input type="button" value="保存" id="save">
+    </section>
+    <section>
+        <input type="button" value="清空" id="clear">
+    </section>
+</div>
+</body>
+<script src="drow.js"></script>
+<script>
+    var canvas = document.querySelector("canvas")
+    var select = document.querySelector("#select")
+    var color = document.querySelector("#color")
+    var width = document.querySelector("#width")
+    var style = document.querySelector("#style")
+    var side=document.querySelector("#side")
+    var save=document.querySelector("#save")
+    console.log(save)
+    var clear=document.querySelector("#clear")
+    var cobj = canvas.getContext("2d")
+    var date=[];
+    var s="rect"
+    var c="#000"
+    var w=2;
+    var sty="fill";
+//    var arc=""
+    select.onchange=function () {
+        s=this.value;
+    }
+    color.onchange=function () {
+        c=this.value;
+    }
+    width.onchange=function () {
+        w=this.value;
+    }
+    style.onchange=function () {
+        sty=this.value;
+    }
+    var si=3;
+    side.onchange=function () {
+        si=this.value;
+    }
+    canvas.onmousedown = function (e) {
+        var ox = e.offsetX;
+        var oy = e.offsetY;
+        var draw=new Draw(cobj,{color:c,width:w,style:sty,side:si})
+        if(s=='pen'){
+            cobj.beginPath()
+            cobj.moveTo(ox,oy)
+        }
+        canvas.onmousemove = function (e) {
+            var mx = e.offsetX;
+            var my = e.offsetY;
+            if(s!="eraser"){
+                cobj.clearRect(0,0,500,500)
+                if(date.length!=0){
+                    cobj.putImageData(date[date.length-1],0,0)
+                }
+            }
+           draw[s](ox,oy,mx,my,si)
+//            cobj.strokeRect(ox,oy,mx-ox,my-oy)
+//            cobj.stroke()
+        }
+        document.onmouseup=function () {
+            date.push(cobj.getImageData(0,0,500,500))
+            canvas.onmousemove=null;
+            document.onmouseup=null;
+        }
+    }
+    var redo=document.querySelector("#redo");
+        redo.onclick=function () {
+            if(date.length==0){
+                alert("已经没有了")
+                return;
+            }
+            cobj.clearRect(0,0,500,500)
+            date.pop()
+            if(date.length==0){
+                return;
+            }
+            cobj.putImageData(date[date.length-1],0,0)
+        }
+    save.onclick=function () {
+        var r=canvas.toDataURL()
+//        location.href=r;
+        location.assign(r)
+    }
+    clear.onclick=function () {
+        cobj.clearRect(0,0,500,500)
+//        location.href()
+        date=[]
+    }
+</script>
+</html>

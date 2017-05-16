@@ -1,0 +1,552 @@
+header .header-top{
+	width: 100%;
+	height: 40px;
+	background: #444444;
+}
+.header-top main{
+	max-width: 976px;
+	height: 100%;
+	/* background: red; */
+	margin: 0 auto;
+}
+.header-top main div{
+	float: right;
+	font-size: 12px;
+	line-height: 40px;
+	color: #A89E86;
+}
+.banner{
+	width: 100%;
+	height: 550px;
+	margin: 0 auto;
+	position: relative;
+	background: #F2F2F2;
+	/* background: #0A0A0A; */
+}
+.banner .lo{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.banner .banner-tu{
+	width: 100%;
+	height: 100%;
+}
+.banner .banner-tu a{
+	display: block;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.lunbo{
+	width: 200px;
+	height: 10px;
+	position: absolute;
+	bottom: 20px;
+	left:0;
+	right:0;
+	margin:auto;
+	/*background: red;*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.lun{
+	width: 50px;
+	height: 2px;
+	background: rgba(128,128,128,0.2);
+}
+.active{
+	background: rgba(128,128,128,0.5);
+}
+footer{
+	/* height:664px; */
+	width: 100%;
+	float: left;
+	background: #F2F2F2;
+	overflow: hidden;
+}
+footer .top{
+	max-width: 980px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 12px;
+	margin: 0 auto;
+	color: #888888;
+	border-bottom:1px solid #D6D6D6 ;
+}
+footer .middle{
+	max-width: 980px;
+	/* height: 204px; */
+	margin: 0 auto;
+	margin-top: 15px;
+	color: #555555;
+	font-size: 8px;
+	overflow: hidden;
+}
+footer .small{
+	background: #F2F2F2;
+}
+
+footer .small .small1{
+	border-bottom: 1px solid #333333;
+}
+.dibu{
+	max-width: 980px;
+	height: 24px;
+}
+/* 屏幕大于1024 */
+@media screen and (min-width: 1024px){
+	.heater-top main{
+		
+		 max-width: 976px;
+		 height: 100%;
+		 margin: 0 auto;
+	}
+	footer .middle dl{
+	width: 20%;
+	height:204px; 
+	float: left;
+	line-height: 20px;
+}
+	.header-nav main{
+		 width: 1000px;
+		 height: 100%;
+		 padding:0 25px;
+		 margin: 0 auto;
+	}
+	.banner .banner-tu a{
+		background-image: url('../img/watch_alt_large.jpg');
+		background-size:contain;
+		background-position: center center ;
+		/* background-size: 100% auto; */
+		background-repeat: no-repeat;
+		/* top: -5px; */
+	}
+	section ul li {
+		width: 25%;
+		height: 200px;
+		float: left;
+		overflow: hidden;
+		background-position: center center;
+    }
+    section ul li .ac{
+		background-image: url('../img/accessories_large.jpg');
+	    background-repeat: no-repeat;
+	
+
+    }
+	section ul li .ip{
+		background-image: url('../img/ipad_pro_large.jpg');
+		background-repeat: no-repeat;
+
+	
+    }
+    section ul li .air{
+		background-image: url('../img/airpods_large.jpg');
+	
+		background-repeat: no-repeat;
+    }
+    section ul li .ip2{
+		background-image: url('../img/iphone_upgrade_large.jpg' );
+	
+		background-repeat: no-repeat;
+
+    }
+
+}
+/* 屏幕小于1024 */
+@media screen and (max-width: 1024px){
+	.header-top main{
+		 
+		 height: 100%;
+		 padding:0 25px;
+		 margin: 0 auto; 
+
+	}
+	footer {
+	
+	/* height:204px;  */
+	padding:0 25px;
+	margin: 0 auto; 
+	display: block;
+	
+	}
+	footer .middle dl{
+	width: 20%;
+	height:204px; 
+	float: left;
+	line-height: 20px;
+	
+	}
+	.header-nav main{
+		 
+		 height: 100%;
+		 padding:0 25px;
+		 margin: 0 auto; 
+
+	}
+	.banner .banner-tu a{
+		background-image: url('../img/watch_alt_medium.jpg');
+		background-size:contain;
+		background-position: center center ;
+		/* background-size: 100% auto; */
+		background-repeat: no-repeat;
+	}
+		section ul li {
+		width: 50%;
+		height: 200px;
+		float: left;
+		overflow: hidden;
+		background-position: center center;
+
+
+    }
+    section ul li .ac{
+		background-image: url('../img/accessories_medium.jpg');
+
+		background-repeat: no-repeat;
+	
+
+    }
+	section ul li .ip{
+		background-image: url('../img/ipad_pro_medium.jpg');
+
+		background-repeat: no-repeat;
+
+    }
+    section ul li .air{
+		background-image: url('../img/airpods_medium.jpg');
+
+		background-repeat: no-repeat;
+
+	
+    }
+    section ul li .ip2{
+		background-image: url('../img/iphone_upgrade_medium.jpg' );
+	
+		background-repeat: no-repeat;
+
+	
+    }
+
+  }
+	
+
+/* 屏幕大于768 */
+@media screen and (min-width: 768px){
+	.header-nav main .nav-top{
+				display: block;
+			}
+	.header-nav main .nav-bottom{
+				display: none;
+			}
+	footer .small{
+				display: none;
+			}
+	footer .max{
+				display: block;
+			}
+	footer .max{
+	width: 100%;
+/* 	height: 293px;
+ */	/* background: red; */
+	overflow: hidden;
+	float: left;
+
+	}
+	footer .max .zui{
+		max-width: 980px;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+	footer .max .small1{
+		width: 100%;
+		height: 39px;
+		background: #F2F2F2;
+		float: left;
+		margin-top: 10px;
+		line-height: 39px;
+		font-size: 10px;
+		float: left;
+	}
+	
+	footer .max .dibu{
+		width: 100%;
+		height: 23px;
+		font-size: 10px;
+		line-height:23px; 
+		float: left;
+		color:#888888;
+		margin-top: 20px;
+		border-bottom: 1px solid #888888;
+		padding-bottom: 10px;
+			
+	}
+	footer .max .zhongguo{
+		width: 100%;
+		/* height: 100px; */
+		display: block;
+		margin-top: 10px;
+		float:right;
+		color:#888888;
+		
+	}
+	footer .max .zhongguo img{
+		width: 21px;
+		height: 16px;
+		float: right;
+		
+
+	}
+	footer .max .zhongguo p{
+		float: right;
+		font-size: 10px;
+		color:#888888;
+		
+	}
+	footer .max .zhongguo .banquan{
+		/* width: 100%; */
+		/* height: 100px; */
+		float: left;
+		margin-top: 4px;
+		font-size: 10px;
+		display: inline;
+		color:#888888;
+		
+	}
+	footer .max  ul{
+		width: 100%;
+	     text-align: center;
+	    display: inline;
+	    margin-top: -5px;
+	    margin-left: 20px;
+	}
+	footer .max  ul li{
+		display: inline-block;
+		border-right: 1px solid rgba(0, 0, 0, 0.5);
+		font-size: 10px;
+		color:#888888;
+		padding-right: 10px;
+		
+	}
+	footer .max .jing{
+		color:#888888;
+		font-size: 12px;
+		margin-top: 10px;
+		float: left;
+	}
+
+}
+/* 屏幕小于768 */
+@media screen and (max-width: 768px){
+
+		.header-nav main .nav-bottom{
+				display: block;
+			}
+		.header-nav main .nav-top{
+				display: none;
+			}
+		footer .small{
+				display: block;
+			}
+		footer .max{
+				display: none;
+			}
+		.banner .banner-tu a{
+			background-image: url('../img/hero_small.jpg');
+			background-size:contain;
+			background-position: center center ;
+			/* background-size: 100% auto; */
+			background-repeat: no-repeat;
+	}
+			section ul li {
+			width: 100%;
+			height: 200px;
+		/* 	float: left; */
+			display: block;
+
+
+			/* overflow: hidden; */
+
+    }
+	section ul li .ac{
+		background-image: url('../img/accessories_small.jpg');
+	 
+		background-position: center top ;
+
+		background-repeat: no-repeat;
+	
+    }
+    section ul li .ip{
+		background-image: url('../img/iphone_upgrade_small.jpg');
+	background-position: center top ;
+
+		background-repeat: no-repeat;
+
+	
+    }
+    section ul li .air{
+		background-image: url('../img/airpods_small.jpg');
+	background-position: center top ;
+
+		background-repeat: no-repeat;
+
+    }
+    section ul li .ip2{
+		background-image: url('../img/iphone_upgrade_small.jpg' );
+	background-position: center top ;
+
+		background-repeat: no-repeat;
+   }
+
+ }
+
+
+
+.header-nav{
+	width: 100%;
+	height: 44px;
+	/* float: left; */
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.header-nav main ul{
+	height: 100%;
+	text-align: justify;
+	line-height: 44px;
+	color: white;
+	font-size: 14px;
+
+}
+
+.header-nav main ul:after{
+	content: "";
+	height: 0;
+	display: inline-block; 
+	width: 100%;
+
+}
+.header-nav main ul li{
+	display: inline-block;
+	
+}
+section{
+	width: 100%;
+	
+
+}
+section ul{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+ section ul li a{
+ 	width: 100%;
+	height: 200px;
+	display: inline-block;
+	background-position: center center;
+	
+} 
+
+footer .small{
+	padding: 0 3px;
+/* 	height: 293px;
+ */	/* background: red; */
+	overflow: hidden;
+	float: left;
+
+}
+footer .small .small1{
+	width: 100%;
+	height: 39px;
+	background: #F2F2F2;
+	float: left;
+	margin-top: 10px;
+	line-height: 39px;
+	font-size: 10px;
+	float: left;
+}
+footer .small .small1 p{
+	float: left;
+}
+footer .small .small1 span{
+	float: right;
+}
+footer .small .dibu{
+	width: 100%;
+	height: 23px;
+	font-size: 10px;
+	line-height:23px; 
+	float: left;
+	color:#888888
+}
+footer .small .zhongguo{
+	width: 100%;
+	height: 100px;
+	display: block;
+	margin-top: 10px;
+	color:#888888
+/* 	margin-left: -456px; */
+}
+footer .small .z{
+	width: 100%;
+	height: 36px;
+	float: left;
+	overflow: hidden;
+	margin-top:8px;
+}
+footer .small .z img{
+	width: 21px;
+	height: 16px;
+	float: left;
+	margin-top: 10px;
+
+}
+footer .small .z p{
+	float: left;
+	font-size: 10px;
+	margin-top: 10px;
+	color: #999999;
+}
+footer .small .banquan{
+	float: left;
+	overflow: hidden;
+
+	
+}
+footer .small .banquan p{
+	float: left;
+	font-size: 10px;
+	color: #999999;
+	margin-top: 10px;
+}
+footer .small  ul{
+     float: left;
+     margin-top: 10px;
+     color: #999999;
+
+}
+footer .small  ul li{
+	float: left;
+	padding-right: 5px;
+	 margin-left: 5px;
+	border-right: 1px solid #888888;
+	font-size: 10px;
+}
+.small .jing{
+		color:#888888;
+		font-size: 10px;
+		margin-top: 10px;
+		float: left;
+	}
+
+
+
+
+
