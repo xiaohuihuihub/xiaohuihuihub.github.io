@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+
+	
+	
+	/* 去除链接下划线 */
+}
+.inner a{
+	color: white;
+}
+.header-main  a{
+	color: #999;
+}
+.banner nav a{
+	color: white;
+}
+.banner .ban a{
+	color: #000000;
+}
+.banner aside a{
+	color:black;
+}
