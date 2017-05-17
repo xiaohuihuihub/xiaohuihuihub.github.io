@@ -145,19 +145,20 @@ $(".lunbo2-zuo").hover(function () {
 //热门家电
 var hh=5;
 $(".r").each(function (i,r) {
-
     $(this).hover(function () {
         hh++;
        $(".ca").eq(i).css("z-index",hh)
         $(".r").removeClass("actives").filter(this).addClass("actives")
     })
 })
-$(".da").each(function (i,r) {
-var hh=5;
+var tt=5;
+$(".da").each(function (i) {
+    console.log($(".da-he"))
+
     $(this).hover(function () {
-        hh++;
-        $(".da-he").eq(i).css("z-index",hh)
+        $(".da-he").eq(i).css("z-index",tt)
         $(".da").removeClass("actives").filter(this).addClass("actives")
+        hh++;
     })
 })
 
