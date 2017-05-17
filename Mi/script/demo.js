@@ -86,9 +86,86 @@ $("aside>ul>li").each(function (i,v) {
     })
 })
 //单品
-var danpin=setInterval(moves,2000)
+var danpin=setInterval(moves,5000)
+var dan=0;
 function moves() {
-    $(".lunbo2-zuo").css("marginLeft","1240px")
+    // console.log(dan)
+    dan++;
+    if(dan==1){
+        $("figure").css("marginLeft","-1240px")
+        $(".lunbo2-you").css("color","#ccc")
+        $(".lunbo2-zuo").css("color","#b0b0b0")
+        console.log(1);
+    }
+    else if(dan==2) {
+        console.log(2)
+        $("figure").css({marginLeft:0})
+        $(".lunbo2-you").css("color","#b0b0b0")
+        $(".lunbo2-zuo").css("color","#ccc")
+        dan=0;
+    }
 }
+$("article").hover(function () {
+    clearInterval(danpin)
+},function () {
+    danpin=setInterval(moves,5000)
+})
+var flagdan=true;
+$(".lunbo2-you").click(function () {
+        if(flagdan){
+            moves()
+        }
+        flagdan=false;
+})
+$(".lunbo2-zuo").click(function () {
+        if(flagdan==false){
+            num=2;
+            moves()
+        }
+        flagdan=true;
+})
+$(".lunbo2-you").hover(function () {
+    if(flagdan){
+        $(this).css("color","orange")
+    }
+},function () {
+    if(flagdan){
+        $(this).css("color","")
+    }
+})
+$(".lunbo2-zuo").hover(function () {
+    if(flagdan==false){
+        $(this).css("color","orange")
+    }
+},function () {
+    if(flagdan==false){
+        $(this).css("color","")
+    }
+})
+//热门家电
+var hh=5;
+$(".r").each(function (i,r) {
+
+    $(this).hover(function () {
+        hh++;
+       $(".ca").eq(i).css("z-index",hh)
+        $(".r").removeClass("actives").filter(this).addClass("actives")
+    })
+})
+$(".da").each(function (i,r) {
+var hh=5;
+    $(this).hover(function () {
+        hh++;
+        $(".da-he").eq(i).css("z-index",hh)
+        $(".da").removeClass("actives").filter(this).addClass("actives")
+    })
+})
+
+
+
+
+
+
+
 
 
