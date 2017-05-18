@@ -32,7 +32,6 @@ header .he-main {
     border-bottom: 1px solid #ddd;
     line-height: 30px;
 }
-
 .login .lo-main {
     width: 1200px;
     height: 30px;
@@ -60,7 +59,12 @@ header .he-main {
     color: #999;
     font-size: 12px;
 }
-
+.login .lo-main .lo-right li a:hover{
+    color:red;
+}
+.login .lo-main .lo-right li .regist{
+    color: red;
+}
 .login .lo-main .lo-right .jing .list {
     width: 280px;
     height: 163px;

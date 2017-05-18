@@ -26,7 +26,7 @@ header a:hover{
 }
 .zuo{
 	float: left;
-	padding-right: 8px; 
+	padding-right: 8px;
 	margin-top: 14px;
 	border-right: 1px solid #424242;
 }
@@ -37,8 +37,8 @@ header a:hover{
 	float: left;
 	margin-top: 14px;
 	padding-left: 8px;
-	padding-right: 8px; 
-	
+	padding-right: 8px;
+
 	border-right: 1px solid #424242;
 
 }
@@ -53,7 +53,7 @@ header a:hover{
 	height:100%;
 	float: right;
 	/* background: red; */
-	
+
 }
 .denglu{
 	width: 132px;
@@ -122,7 +122,6 @@ header a:hover{
 }
 .nav{
 	width: 100%;
-	overflow: hidden;
 	position: relative;
 }
 
@@ -132,14 +131,13 @@ nav{
 	height: 100px;
 	margin: 0 auto;
  	position: relative;
-	overflow: hidden;
 }
 
 nav .logo{
 	width:55px ;
 	height:55px ;
 	background: #FF6600 url('../img/mi-logo.png') center;
-	position: absolute;	
+	position: absolute;
 	left: 0;
 	top:0;
 	bottom: 0;
@@ -170,19 +168,20 @@ nav ul li {
 	float: left;
 	padding-left: 20px;
 	line-height: 100px;
-	position: relative;	 
+	position: relative;
 }
 .clearfix{
 	width: 100%;
-	height: 0;
+	height: 230px;
 	position: absolute;
-	top: 143px;
+	top: 100px;
 	left: 0;
 	border-top:0px solid #000;
 	background: white;
 	z-index: 999;
 	overflow: hidden;
 	transition: all 1s;
+    display: none;
 }
 .clearfix>.list{
 	width: 1200px;
@@ -245,7 +244,7 @@ nav ul li a:hover{
 	float: right;
 	border: 1px solid #e2e1e1;
 	margin-top: 30px;
-	
+
 }
 .kuang{
 	width: 242px;
@@ -451,7 +450,7 @@ position: relative;
 	margin:auto;
 }
 .one{
-	
+
 	margin-left: 30px;
 }
 .two{
@@ -491,13 +490,12 @@ position: relative;
 }
 .liebiao{
 	width:234px;
-	height:170px; 
+	height:170px;
 	background: #5F5750;
 	float: left;
 	margin-right: 14px;
 }
 .liebiao ul{
-	margin-top: 30px;
 	margin-left: 12px;
 	overflow: hidden;
 
@@ -510,49 +508,55 @@ position: relative;
 	padding-left: 10px;
 }
 .liebiao ul li a{
-	overflow: hidden;
+	display: block;
+    padding-top: 10px;
 }
 .liebiao ul li a img{
 	float: left;
 	margin-left: 16px;
 	margin-bottom: 4px;
 }
-
+.liebiao h5{
+    margin-top: 10px;
+}
 .liebiao ul li a:hover{
 	color: #fff;
 
-} 
+}
+.liebiao ul li a:hover .iconfont{
+    color: #fff;
+}
 .liebiao ul li:nth-child(1){
-	
+
 	border-right: 1px solid #665E57;
 
 
 
 }
 .liebiao ul li:nth-child(2){
-	
+
 	border-right: 1px solid #665E57;
 
 }
 .liebiao ul li:nth-child(4){
-	margin-top: 28px;
+	margin-top: 30px;
 	border-right: 1px solid #665E57;
 
 }
 .liebiao ul li:nth-child(5){
-	margin-top: 35px;
+	margin-top: 30px;
 	border-right: 1px solid #665E57;
 }
 .liebiao ul li:nth-child(6){
-	margin-top: 35px;
+	margin-top: 30px;
 }
 .mi5{
 	width: 316px;
-	height:170px; 
+	height:170px;
 	transition: box-shadow 0.5s linear;
 	float: left;
 	margin-right: 14px;
-	
+
 
 }
 .mi5:hover{
@@ -561,38 +565,38 @@ position: relative;
 }
 .tupian1{
 	width: 100%;
-	height:100%; 
+	height:100%;
 
 
 }
 .mi4{
 	width: 316px;
-	height:170px; 
+	height:170px;
 	float: left;
 	transition: box-shadow 0.5s linear;
 	margin-right: 14px;
-	
+
 }
 
 .mi4:hover{
 	box-shadow: 0px 15px 150px 1px #343434;
 
 }
-.clear{
+.clear1{
 	width: 316px;
-	height:170px; 
+	height:170px;
 	float: right;
 	transition: box-shadow 0.5s linear;
-	
-	
+
+
 }
-.clear:hover{
+.clear1:hover{
 	box-shadow: 0px 15px 50px 1px #343434;
 
 }
 .tupian3{
 	width: 100%;
-	height:100%; 
+	height:100%;
 
 
 }
@@ -637,26 +641,26 @@ pre{
 
 	background: #FAFAFA;
 	float: left;
-	
+
 
 }
 pre img{
 	width: 160px;
 	height: 160px;
 	float: left;
-	margin-left:37px; 
+	margin-left:37px;
 }
 pre .miaoshu{
 	width: 100%;
 
 	float: left;
 	overflow: hidden;
-	
+
 }
 
 pre .miaoshu a{
 	float: left;
-	margin-left:50px; 
+	margin-left:50px;
 	font-size: 14px;
 	text-align: center;
 	color: #212121;
@@ -664,7 +668,7 @@ pre .miaoshu a{
 }
 pre .miaoshu .p1{
 	float: left;
-	margin-left:30px; 
+	margin-left:30px;
 	font-size: 12px;
 
 	color: #C1C1C1;
@@ -673,7 +677,7 @@ pre .miaoshu .p1{
 pre .miaoshu .p2{
 	float: left;
 
-	margin-left:90px; 
+	margin-left:90px;
 	font-size: 14px;
 
 	color: #FF6709;
@@ -747,7 +751,7 @@ section{
 	width: 100%;
 	height: 58px;
 	/* background: pink; */
-	
+
 }
 .zhineng{
 	float: left;
@@ -755,7 +759,7 @@ section{
 	font-size: 22px;
 	color: #333;
 
-	
+
 }
 .capa{
 	float: right ;
@@ -790,7 +794,7 @@ section{
 	height: 628px;
 	float: left;
 	position: relative;
-	
+
 }
 .dianfanbao {
 	width: 248px;
@@ -835,12 +839,12 @@ height: 662px;
 	height: 300px;
 
 	background: #FFF;
-	
+
 	/* margin-right: 10px; */
 	float: left;
 	margin-top: 28px;
 	transition: all .3s linear;
-	
+
 
 }
 .you16 ul li.ji{
@@ -873,14 +877,14 @@ height: 662px;
 	box-shadow:  10px 15px 50px 5px rgba(217, 217, 217, 0.8);
 	transform: translateY(-3px);
 
-	
+
 
 }
 .you16 ul li img{
 	width: 160px;
 	height: 160px;
 	float: left;
-	margin-left:37px; 
+	margin-left:37px;
 }
 .you16 ul li .miaoshu2{
 	width: 100%;
@@ -888,12 +892,12 @@ height: 662px;
 	float: left;
 	overflow: hidden;
 	position: relative;
-	
+
 }
 
 .you16 ul li .miaoshu2 a{
 	float: left;
-	/* margin-left:50px; */ 
+	/* margin-left:50px; */
 	font-size: 14px;
 	text-align: center;
 	color: #212121;
@@ -914,12 +918,12 @@ height: 662px;
 	color: #C1C1C1;
 	margin-top: 40px;
 
-	
+
 }
 .you16 ul li .miaoshu2 .p2{
 	float: left;
 
-	margin-left:90px; 
+	margin-left:90px;
 	font-size: 14px;
 
 	color: #FF6709;
@@ -934,35 +938,35 @@ height: 662px;
 	margin-top: 40px;
 	position: relative;
 }
-	
+
 .dapei-header{
 	width: 100%;
 	height: 58px;
 /* 	background: pink; */
-	
+
 }
 .dapei-header p{
-	
+
 	float: left;
 	line-height: 58px;
 	font-size: 22px;
 	color: #333;
-	
+
 }
 .dapei-header a{
-	
+
 	float: right;
 	margin-left: 20px;
 	line-height: 58px;
 	font-size: 16px;
 	color: #333;
-	
+
 }
 .dapei-header a:hover{
-	
-	
+
+
 	color: #ff6700;
-	
+
 }
 .dapei ul{
 position: absolute;
@@ -970,21 +974,21 @@ position: absolute;
 	left: 0;
 
 }
-.dapei ul li{	
+.dapei ul li{
 	 width: 234px;
-     height: 300px;	
+     height: 300px;
      float: left ;
      margin-left: 14px;
      margin-top: 14px;
      background: white;
      transition: all .3s linear;
-     position: relative; 
+     position: relative;
      overflow: hidden;
 
 }
-.dapei ul li:nth-child(10){	
+.dapei ul li:nth-child(10){
 	 width: 234px;
-     height: 143px;	
+     height: 143px;
      float: left ;
      margin-left: 14px;
      margin-top: 14px;
@@ -992,9 +996,9 @@ position: absolute;
      overflow: hidden;
 
 }
-.dapei ul li:nth-child(11){	
+.dapei ul li:nth-child(11){
 	 width: 234px;
-     height: 143px;	
+     height: 143px;
      float: left ;
      margin-left: 14px;
      margin-top: 14px;
@@ -1005,28 +1009,28 @@ position: absolute;
 	box-shadow: 0px 15px 30px 8px rgba(217, 217, 217, 0.8);
 	transform: translateY(-5px);
 }
-.dapei ul li:nth-child(1){	
-	
+.dapei ul li:nth-child(1){
+
      float: left ;
-     
+
      margin-left: 0px;
 }
-.dapei ul li:nth-child(6){	
-	
+.dapei ul li:nth-child(6){
+
      float: left ;
-     
+
      margin-left: 0px;
 }
 .dapei ul li .lanyaerji{
  width: 234px;
- height: 300px;	
+ height: 300px;
 
 }
 
 .dapei ul li .commodity{
  width: 150px;
  height: 150px;
- margin-left: 42px;	
+ margin-left: 42px;
 }
 .dapei ul li .xiaotu{
  width: 80px;
@@ -1046,7 +1050,7 @@ position: absolute;
 
 .dapei ul li .miaoshu3 a{
 	float: left;
-	margin-left:70px; 
+	margin-left:70px;
 	font-size: 14px;
 	text-align: center;
 	color: #212121;
@@ -1054,7 +1058,7 @@ position: absolute;
 }
 .dapei ul li .miaoshu3 .p1{
 	float: left;
-	margin-left:30px; 
+	margin-left:30px;
 	font-size: 12px;
 
 	color: #C1C1C1;
@@ -1063,7 +1067,7 @@ position: absolute;
 .dapei ul li .miaoshu3 .p2{
 	float: left;
 
-	margin-left:90px; 
+	margin-left:90px;
 	font-size: 14px;
 
 	color: #FF6709;
@@ -1082,7 +1086,7 @@ position: absolute;
 .dapei ul li .miaoshu4 .p5{
 	float: left;
 
-	/* margin-left:90px; */ 
+	/* margin-left:90px; */
 	font-size: 12px;
 
 	color: #FF6709;
@@ -1091,7 +1095,7 @@ position: absolute;
 .dapei ul li .miaoshu4 .liulan a{
 	float: left;
 
-	/* margin-left:90px; */ 
+	/* margin-left:90px; */
 	font-size: 20px;
 
 	color: #333333;
@@ -1110,7 +1114,7 @@ position: absolute;
 	bottom: -76px;
 	margin: auto;
 	opacity: 0;
-	
+
 }
 .dapei ul li:hover .bottom{
 	animation: xianshi .3s linear forwards;
@@ -1118,26 +1122,26 @@ position: absolute;
 @keyframes xianshi{
 	0%{
 		opacity: 0;
-		transform:translateY(0px); 
+		transform:translateY(0px);
 	}
 	30%{
 		opacity: 0.3;
-		transform:translateY(-30px); 
+		transform:translateY(-30px);
 	}
 	50%{
 		opacity: 0.5;
-		transform:translateY(-40px); 
+		transform:translateY(-40px);
 	}
-	
+
 	100%{
 		opacity: 1;
-		transform:translateY(-76px); 
+		transform:translateY(-76px);
 	}
 }
 .dapei .bottom .p3{
 	font-size: 12px;
 	color: #fff;
-	
+
 	margin-top: 10px;
 	margin-left: 25px;
 	margin-right: 25px;
@@ -1145,7 +1149,7 @@ position: absolute;
 .dapei .bottom .p4{
 	font-size: 10px;
 	color: #FFC198;
-	
+
 	margin-top: 10px;
 	margin-left: 40px;
 	margin-right: 40px;
@@ -1176,7 +1180,7 @@ section .dapei:nth-child(5){
 .reping-bottom{
 	width: 100%;
 	float: left;
-	
+
 
 }
 .reping-bottom ul{
@@ -1191,11 +1195,11 @@ section .dapei:nth-child(5){
 	transition: all .3s linear;
 	overflow: hidden;
 	margin-left: 14px;
-	
+
 }
 .reping-bottom ul li:nth-child(1){
 	float: left;
-	margin-left: 0px;	
+	margin-left: 0px;
 
 }
 .reping-bottom ul li:hover{
@@ -1209,7 +1213,7 @@ section .dapei:nth-child(5){
 	float: left;
 }
 .reping-bottom ul li a{
-	
+
 	color: #3d3d3d;
 	font-size: 14px;
 	float: left;
@@ -1218,16 +1222,16 @@ section .dapei:nth-child(5){
 	margin-right: 20px;
 }
 .reping-bottom ul li .pingjia{
-	
+
 	color: #CBB7B7;
 	font-size: 14px;
 	float: left;
 	margin-top: 30px;
 	margin-left: 20px;
-	
+
 }
 .reping-bottom ul li .price{
-	
+
    width: 250px;
    height: 80px;
    float: left;
@@ -1240,7 +1244,7 @@ section .dapei:nth-child(5){
 .reping-bottom ul li .price .jiage{
 	float: left;
 	margin-top: 30px;
-	color: #FF6709; 
+	color: #FF6709;
 
 }
 .neirong {
@@ -1258,7 +1262,7 @@ section .dapei:nth-child(5){
 	float: left;
 	line-height: 58px;
 	font-size: 22px;
-} 
+}
 .neirong-bottom {
 	width: 100%;
 	float: left;
@@ -1268,23 +1272,40 @@ section .dapei:nth-child(5){
 .neirong-bottom ul{
 	float: left;
 }
-.neirong-bottom ul li{
+.neirong-bottom ul>li{
+	float: left;
+	width: 296px;
+	height: 420px;
+	background: white;
+	margin-left: 14px;
+	overflow: hidden;
+	transition : all .5s linear;
+	position: relative;
+}
+.neirong-bottom ul li .quan{
+	float: left;
+	width:888px ;
+	transition: all 0.9s;
+}
+.neirong-bottom ul li .quan2,.neirong-bottom ul li .quan3,.neirong-bottom ul li .quan4{
+	float: left;
+	width:1184px;
+	transition: all 0.9s;
+}
+.neirong-bottom ul li .li{
 	float: left;
 	width: 296px;
 	height: 420px;
 	overflow: hidden;
 	background: white;
-	margin-top:5px; 
-	border-top: 1px #FFAC13 solid;
+	margin-top:5px;
 	position: relative;
-	transition : all .3s linear;
-	margin-left: 14px;
-
+	transition : all .5s linear;
 }
 .neirong-bottom ul li:nth-child(1){
 	margin-left: 0px;
-	
 
+    border-top: 1px #FFAC13 solid;
 }
 .neirong-bottom ul li:nth-child(2){
 	border-top: 1px #98CE6C solid;
@@ -1292,18 +1313,18 @@ section .dapei:nth-child(5){
 
 }
 .neirong-bottom ul li:nth-child(2) h2{
-	
+
 	margin-left:110px;
 
 	color: #98CE6C;
-	
+
 }
 .neirong-bottom ul li:nth-child(2) .biaoti{
 /* 	width: 190px; */
 
-	
+
 	margin-left: 90px;
-	
+
 }
 .neirong-bottom ul li:nth-child(2) .lun .lun2{
 
@@ -1322,23 +1343,23 @@ section .dapei:nth-child(5){
 .neirong-bottom ul li:nth-child(3) .biaoti{
 /* 	width: 190px; */
 
-	
+
 	margin-left: 90px;
-	
+
 }
 .neirong-bottom ul li:nth-child(3) .xushu{
 /* 	width: 190px; */
 
-	
+
 	margin-left: 80px;
-	
+
 }
 .neirong-bottom ul li:nth-child(3) .price2{
 /* 	width: 190px; */
 
 	margin-top: 30px;
 	margin-left: 140px;
-	
+
 }
 .neirong-bottom ul li:nth-child(3) .lun .lun2{
 
@@ -1358,16 +1379,16 @@ section .dapei:nth-child(5){
 .neirong-bottom ul li:nth-child(4) .biaoti{
 /* 	width: 190px; */
 
-	
+
 	margin-left: 110px;
-	
+
 }
 .neirong-bottom ul li:nth-child(4) .xushu{
 /* 	width: 190px; */
 
-	
+
 	margin-left: 100px;
-	
+
 }
 .neirong-bottom ul li:nth-child(4) img{
 
@@ -1411,7 +1432,7 @@ section .dapei:nth-child(5){
 	float: left;
 	margin-left: 125px;
 	font-size: 12px;
-	
+
 }
 .neirong-bottom ul li img{
 	width: 216px;
@@ -1421,48 +1442,49 @@ section .dapei:nth-child(5){
 	margin-top: 20px;
 }
 .neirong-bottom ul li .lun{
-	
-	
 	position: absolute;
-	left:105px;
+	width: 100px;
+	left:0;
+	right:0;
 	bottom: 20px;
 	margin: auto;
-
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .neirong-bottom ul li .lun .lun1{
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	border: 2px #FF6700 solid;
-	background: white;
-	float: left;
-}
-.neirong-bottom ul li .lun .lun2{
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;
-	
 	background: #B0B0B0;
-	margin-top: 2px;
-	margin-left: 27px;
-	float: left;
+	cursor: pointer;
 }
-.neirong-bottom ul li .lun .lun2:hover{
-	background: #FF6700;
+.neirong-bottom ul li .lun .lun1.activess{
+	width: 10px;
+	height: 10px;
+	border: 2px #FF6700 solid;
+	background: white;
+}
+.neirong-bottom ul li .lun .lun1:first-child{
+	margin-left: 0;
+}
+.neirong-bottom ul li .lun .lun1.or{
+	background:orange;
 }
 .zuokuang{
 	width: 20px;
 	height: 48px;
 	float: left;
 	background: #D9D9D9;
-	 
+	cursor: pointer;
+
 	/* background-size: 10px 16px; */
 
 	position: absolute;
 	/* left: 0px; */
 	top: 0px;
 	bottom: 0px;
-	
+
 	margin:auto;
 	overflow: hidden;
 	opacity: 0;
@@ -1486,7 +1508,7 @@ margin-left: 4px;
 	right: 0px;
 	top: 0px;
 	bottom: 0px;
-	
+	cursor: pointer;
 	margin:auto;
 	opacity: 0;
 }
@@ -1534,17 +1556,19 @@ margin-left: 4px;
 }
 .shipin-header .shipinzuo{
 	line-height: 58px;
-	float: left; 
+	float: left;
 	font-size: 22px;
 }
 .chakan{
 	float: right ;
-	width: 92px;
+	width: 102px;
 	height: 58px;
 
 }
 .chakan a{
-	float: left;
+    display: block;
+    float: left;
+    width: 100%;
 }
 .chakan a .kan{
 	float: left ;
@@ -1564,6 +1588,10 @@ margin-left: 4px;
 	background: #b0b0b0;
 	margin-top: 19px;
 	float: right;
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+    color: white;
 }
 .chakan a b{
 	float: left;
@@ -1589,7 +1617,8 @@ margin-left: 4px;
 	background: white;
 	margin-top: 5px;
 	margin-left: 14px;
-	transition : all .3s linear; 
+	transition : all .3s linear;
+    cursor: pointer;
 }
 .shipin-bottom ul li:nth-child(1){
     margin-left: 0px;
@@ -1674,14 +1703,14 @@ footer .footer-main .footer-header ul li{
 }
 footer .footer-main .footer-header ul li:nth-child(1){
 	margin-left: 0px;
-	
+
 }
 footer .footer-main .footer-header ul li:nth-child(5){
 	border-right: 0px solid #616161;
 }
 footer .footer-main .footer-header ul li img{
 	float: left;
-	
+
 	margin-left: 50px;
 }
 footer .footer-main .footer-header ul li p{
@@ -1691,7 +1720,7 @@ footer .footer-main .footer-header ul li p{
 	color: #616161;
 }
 footer .footer-main .footer-header ul li a:hover{
-	color: orangered; 
+	color: orangered;
 }
 .footer-bottom{
 	width: 1226px;

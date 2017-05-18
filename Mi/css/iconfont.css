@@ -9,11 +9,13 @@
 
 .iconfont {
   font-family:"iconfont" !important;
-  font-size:24px;
+  font-size:26px;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color:#ff6700;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
 }
 
 .icon-gouwuchekong:before { content: "\e600"; }
