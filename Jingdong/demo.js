@@ -40,5 +40,18 @@ $(function () {
     },function () {
         t=setInterval(move,3000)
     })
+    $(".listss").each(function (i,v) {
+     console.log(i)
+     $(this).hover(function () {
+     $(".list").eq(i).css("display","block")
+     },function () {
+     $(".list").eq(i).css("display","none")
+     console.log(2)
+     })
+     })
     //楼层跳转
 })//结束
+//header
+
+
+
