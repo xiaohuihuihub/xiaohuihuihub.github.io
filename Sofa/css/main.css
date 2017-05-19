@@ -743,11 +743,10 @@ a {
     width: auto;  height: auto;
 }
 .panel-body .tab-c .t-pane .r-list .active{
-    height: auto;
     margin-bottom: 10px;
-    height: 30px;
     border-bottom: 1px dashed #ddd;
     overflow: hidden;
+
 }
 .panel-body .tab-c .t-pane .r-list .active .r-title{
     display: block;
