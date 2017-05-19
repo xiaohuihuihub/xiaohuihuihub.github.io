@@ -54,11 +54,13 @@ header .header-top{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 999;
 }
 .lun{
 	width: 50px;
 	height: 2px;
 	background: rgba(128,128,128,0.2);
+	cursor: pointer;
 }
 .active{
 	background: rgba(128,128,128,0.5);
@@ -99,6 +101,15 @@ footer .small .small1{
 	max-width: 980px;
 	height: 24px;
 }
+.banner .banner-tu a{
+	opacity: 0;
+	z-index: 0;
+	transition: all 1s;
+}
+.banner .banner-tu a.active{
+	opacity: 1;
+	z-index: 1;
+}
 /* 屏幕大于1024 */
 @media screen and (min-width: 1024px){
 	.heater-top main{
@@ -119,8 +130,24 @@ footer .small .small1{
 		 padding:0 25px;
 		 margin: 0 auto;
 	}
-	.banner .banner-tu a{
-		background-image: url('../img/watch_alt_large.jpg');
+	.banner .banner-tu .img1{
+		background:#f2f2f2 url('../img/watch_alt_large.jpg');
+		background-size:contain;
+		background-position: center center ;
+		/* background-size: 100% auto; */
+		background-repeat: no-repeat;
+		/* top: -5px; */
+	}
+	.banner .banner-tu .img2{
+		background:#0a0a0a url('../img/iphone_alt_large (1).jpg');
+		background-size:contain;
+		background-position: center center ;
+		/* background-size: 100% auto; */
+		background-repeat: no-repeat;
+		/* top: -5px; */
+	}
+	.banner .banner-tu .img3{
+		background:#c40000 url('../img/iphone7_productred_large.png');
 		background-size:contain;
 		background-position: center center ;
 		/* background-size: 100% auto; */
@@ -190,12 +217,27 @@ footer .small .small1{
 		 margin: 0 auto; 
 
 	}
-	.banner .banner-tu a{
-		background-image: url('../img/watch_alt_medium.jpg');
+	.banner .banner-tu .img1{
+		background:#f2f2f2 url('../img/watch_alt_medium.jpg');
 		background-size:contain;
 		background-position: center center ;
 		/* background-size: 100% auto; */
 		background-repeat: no-repeat;
+	}
+	.banner .banner-tu .img2{
+		background:#0a0a0a url('../img/iphone_alt_medium.jpg');
+		background-size:contain;
+		background-position: center center ;
+		/* background-size: 100% auto; */
+		background-repeat: no-repeat;
+	}
+	.banner .banner-tu .img3{
+		background:#c40000 url('../img/iphone7_productred_mudiem.png');
+		background-size:contain;
+		background-position: center center ;
+		/* background-size: 100% auto; */
+		background-repeat: no-repeat;
+		/* top: -5px; */
 	}
 		section ul li {
 		width: 50%;
@@ -357,12 +399,27 @@ footer .small .small1{
 		footer .max{
 				display: none;
 			}
-		.banner .banner-tu a{
-			background-image: url('../img/hero_small.jpg');
+		.banner .banner-tu .img1{
+			background:#f2f2f2 url('../img/hero_small.jpg');
 			background-size:contain;
 			background-position: center center ;
 			/* background-size: 100% auto; */
 			background-repeat: no-repeat;
+	}
+	.banner .banner-tu .img2{
+		background:#0a0a0a url('../img/iphone_alt_small.jpg');
+		background-size:contain;
+		background-position: center center ;
+		/* background-size: 100% auto; */
+		background-repeat: no-repeat;
+	}
+	.banner .banner-tu .img3{
+		background:#c40000 url('../img/iphone7_productred_small.png');
+		background-size:contain;
+		background-position: center center ;
+		/* background-size: 100% auto; */
+		background-repeat: no-repeat;
+		/* top: -5px; */
 	}
 			section ul li {
 			width: 100%;
