@@ -704,7 +704,7 @@ section {
     width: 1170px;
     height: 100%;
     position: relative;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .xilie .content ul {
