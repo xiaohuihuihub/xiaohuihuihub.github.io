@@ -442,7 +442,7 @@ header .he-main {
     color: #555;
     font-weight: 700;
 }
-.logo .logo-main .quick ul li:hover{
+.logo .logo-main .quick ul li:hover a{
     color: red;
 }
 
@@ -989,14 +989,63 @@ aside .lis .hea a{
     background: #fff;
     float: left;
     padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
 }
-.limited-m .lim-c li{
+.limited-m .lim-c .bo{
+    width: 1000px;
+    height:100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+
+}
+.limited-m .lim-c .bo li{
     width:200px;
     height:225px;
     border-right: 1px solid #ccc;
     padding:0 10px;
+    float: left;
+}
+.limited-m .lim-c .bo .ul{
+    width: 3000px;
+    overflow: hidden;
+
+}
+
+.z-pre{
+    width: 20px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #f3f2f3;
+    text-align: center;
+    line-height: 48px;
+    z-index: 5;
+    color: #797173;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
+}
+.y-next{
+    width: 20px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #f3f2f3;
+    text-align: center;
+    line-height: 48px;
+    z-index: 5;
+    color: #797173;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
 }
 .limited-m .lim-c .none{
     border: 0;

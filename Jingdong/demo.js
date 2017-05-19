@@ -11,7 +11,7 @@ $(function () {
     var x= setInterval(times, 1000);
     function times() {
         time--;
-        console.log(time);
+        // console.log(time);
         hours=Math.floor(time/3600);
         mins = Math.floor((time-hours*3600)/60);
         secs = Math.floor((time-hours*3600)% 60);
@@ -253,6 +253,37 @@ function banner(lun,banli,box,pre,next) {
          $(".lis").eq(i).mouseout(function () {
             $(".lis").eq(i).css("display","none")
         })
+    })
+    //zj
+    var nu=0;
+    function z() {
+        nu++;
+        if(nu==-2){
+            nu=0;
+        }
+        $(".lim-c .ul").css("transition","all 3s")
+        $(".bo .ul").css("margin-left",-nu*1000+"px")
+    }
+    $(".lim-c").hover(function () {
+        $(".y-next").css("opacity","1")
+        $(".z-pre").css("opacity","1")
+    },function () {
+        $(".y-next").css("opacity","0")
+        $(".z-pre").css("opacity","0")
+    })
+    $(".y-next").click(function () {
+        z()
+    })
+    $(".z-pre").click(function () {
+        nu-=2;
+        z()
+    })
+    $(".bo .ul").on("transitionend",function () {
+        if(nu==2){
+            nu=0;
+            $(".bo .ul").css("margin-left",-nu*1000+"px")
+            $(".bo .ul").css("transition","none")
+        }
     })
 })//结束
 //header

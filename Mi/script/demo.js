@@ -1,6 +1,7 @@
 var img = document.querySelectorAll(".ban li")
 var lun = document.querySelectorAll(".lunbo .dian")
 var banner = document.querySelector(".banner")
+console.log(lun)
 var zuojian = document.querySelector(".zjs")
 var youjian = document.querySelector(".yjs")
 var obj = img[0]
