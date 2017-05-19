@@ -121,13 +121,13 @@ $("article").hover(function () {
     danpin = setInterval(moves, 5000)
 })
 var flagdan = true;
-$(".lunbo2-you").click(function () {
+$(".lunbo2-zuo").click(function () {
     if (flagdan) {
         moves()
     }
     flagdan = false;
 })
-$(".lunbo2-zuo").click(function () {
+$(".lunbo2-you").click(function () {
     if (flagdan == false) {
         num = 2;
         moves()
