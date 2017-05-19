@@ -76,6 +76,7 @@ header .he-main {
     color: #666;
     line-height: 24px;
     display: none;
+    z-index: 999;
 }
 
 .login .lo-main .lo-right .jing .list .list1 {
@@ -116,6 +117,7 @@ header .he-main {
     box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
     padding-left: 20px;
     display: none;
+    z-index:999;
 
 }
 
@@ -155,6 +157,7 @@ header .he-main {
     background: #fff;
     box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
     display: none;
+    z-index: 999;
 }
 
 .login .lo-main .lo-right .web .list .list1 {
@@ -223,6 +226,8 @@ header .he-main {
     right: 0;
     border: 1px solid #ccc;
     display: none;
+    z-index: 999;
+    background: white;
 }
 
 .login .lo-main .lo-right .phone .list ul {
@@ -541,7 +546,43 @@ aside ul li a {
 .lun1.active {
     background: red;
 }
+.ba-pre {
+    width: 20px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #f3f2f3;
+    text-align: center;
+    line-height: 48px;
+    z-index: 5;
+    color: #797173;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
+}
 
+.ba-next {
+    width: 20px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #f3f2f3;
+    text-align: center;
+    line-height: 48px;
+    z-index: 5;
+    color: #797173;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
+}
 .feature {
     width: 800px;
     height: 130px;
@@ -745,6 +786,196 @@ aside ul li a {
     margin-left: 10px;
     margin-top: 10px;
 }
+.limited{
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    margin: 10px 0 30px 0;
+}
+.limited-m{
+    width: 1190px;
+    height: 305px;
+    margin:0 auto;
+}
+.limited-m .lim-h{
+    width: 1190px;
+    height: 55px;
+    background: url("../img/seckill_hd.png") no-repeat;
+    float: left;
+    padding: 3px 0;
+}
+.limited-m .lim-h .lim-h-l{
+    float: left;
+    width: 36%;
+    height:49px;
+    position: relative;
+}
+.limited-m .lim-h .lim-h-l .dec{
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/sprite_index@1x.png);
+    background-position: -190px -48px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:-7px;left:-1px;
+    margin:auto;
+}
+.limited-m .lim-h .lim-h-l .icon{
+    width: 34px;
+    height: 40px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 30px;
+    background-image: url(../img/sprite_index@1x.png);
+    background-position: 0 -40px;
+    background-repeat: no-repeat;
+}
+.limited-m .lim-h .lim-h-l .font{
+    font-family: fzzhengheis-el-gbregular;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 40px;
+    height: 40px;
+    padding-top: 3px;
+    float: left;
+    margin-left: 5px;
+    color: #fff;
+}
+.limited-m .lim-h .lim-h-l .small{
+    float: left;
+    margin-top: 16px;
+    margin-left: 12px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #fff;
+}
+.limited-m .lim-h .lim-h-r{
+    width: 25%;
+    height:49px;
+    position: relative;
+    float: right;
+}
+.lim-h-r .tip{
+    float: left;
+    line-height: 45px;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+.lim-h-r .time{
+    width: 129px;
+    height: 47px;
+    float: left;
+    margin-left: 6px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.lim-h-r .time li{
+    font-size: 35px;
+    color: #440106 ;
+}
+.lim-h-r .time .timetip{
+    /*width: 35px;*/
+    height: 37px;
+    background-color: #440106;
+    color: #f90013;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 37px;
+    float: left;
+    margin-top: 10px;
+}
+.limited-m .lim-c{
+    width: 1190px;
+    height: 250px;
+    background: #fff;
+    float: left;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.limited-m .lim-c li{
+    width:200px;
+    height:225px;
+    border-right: 1px solid #ccc;
+    padding:0 10px;
+}
+.limited-m .lim-c .none{
+    border: 0;
+}
+.limited-m .lim-c li .show{
+    width: 170px;
+    height: 196px;
+    position: relative;
+}
+.limited-m .lim-c li .show img {
+    width: 130px;
+    height: 130px;
+    float: left;
+    margin: 10px 20px;
+    transition: transform .4s ease;
+}
+.limited-m .lim-c li .show img:hover{
+    transform: translateY(-8px);
+}
+.limited-m .lim-c li .show span{
+    width: 170px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 109px;
+    text-align: center;
+    background-image: url(../img/sprite_index@1x.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.limited-m .lim-c li .show p{
+    color: #999;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+    height: 32px;
+    line-height: 16px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.limited-m .lim-c li .show p:hover{
+    color: #f10214;
+}
+.limited-m .lim-c li .price{
+    width: 170px;
+    height: 31px;
+    float: left;
+    padding: 3px 0;
+}
+.limited-m .lim-c li .price .new{
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 8px;
+    color: #f10214;
+}
+.limited-m .lim-c li .price .new i{
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+}
+.limited-m .lim-c li .price .origin{
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+}
+.limited-m .lim-c li .price .origin i{
+    font-style: normal;
+}
+.limited-m .lim-c li .price .origin span{
+    text-decoration: line-through;
+}
 .seckill{
     width: 1200px;
     height: 305px;
@@ -920,7 +1151,9 @@ aside ul li a {
     float: left;
     margin-left: 8px;
 }
-
+.seck .nei li:hover img{
+    transform: translateX(-5px);
+}
 .seck .nei li {
     width: 185px;
     height: 121px;
@@ -966,6 +1199,7 @@ aside ul li a {
     float: left;
     margin-top: -14px;
     margin-left: 100px;
+    transition: all 0.2s;
 
 }
 
@@ -1073,11 +1307,52 @@ aside ul li a {
     border-radius: 50%;
     background: #c8c8c8;
 }
-
-.seck2 .lun2 .luns:first-child {
-    background: red;
+.seck2 .lun2 .luns.active{
+    background:red;
+}
+.s-pre {
+    width: 20px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #f3f2f3;
+    text-align: center;
+    line-height: 48px;
+    z-index: 5;
+    color: #797173;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
 }
 
+.s-next {
+    width: 20px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #f3f2f3;
+    text-align: center;
+    line-height: 48px;
+    z-index: 5;
+    color: #797173;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 1s;
+}
+.seck2:hover .s-next{
+    opacity: 1;
+}
+.seck2:hover .s-pre{
+    opacity: 1;
+}
 .seck3 {
     width: 390px;
     height: 444px;
@@ -1132,7 +1407,6 @@ aside ul li a {
     margin-left: 135px;
 
 }
-
 .seck3-header span a {
     color: white;
     display: inline-block;
@@ -1142,8 +1416,21 @@ aside ul li a {
     width: 390px;
     height: 389px;
     float: left;
+    position: relative;
 }
-
+.chuchai{
+    position: absolute;
+    top:55px;
+    left: 0;
+    width: 100%;
+    transition: all 1s;
+    z-index: 0;
+    opacity: 0;
+}
+.chuchai.active{
+    z-index: 1;
+    opacity: 1;
+}
 .seck3 .nei .nei-header {
     width: 380px;
     height: 31px;
@@ -1161,18 +1448,28 @@ aside ul li a {
 }
 
 .seck3 .nei .nei-header ul li {
-    width: 78px;
+    /*width: 78px;*/
     height: 18px;
     text-align: center;
+    cursor: pointer;
 }
-
+.seck3 .nei .nei-header ul li a:hover{
+    color:red;
+    border-bottom: 3px solid red;
+}
 .seck3 .nei .chu {
     width: 370px;
     height: 335px;
+    position: absolute;
+    left:10px;
+    top:40px;
     float: left;
-    margin-left: 10px;
-}
+    display: none;
 
+}
+.seck3 .nei .chu.dis{
+    display: block;
+}
 .seck3 .nei .chu li {
     width: 123px;
     height: 167px;
@@ -1180,19 +1477,15 @@ aside ul li a {
     border-bottom: 1px solid #e7e7e7;
     border-right: 1px solid #e7e7e7;
 }
-
 .seck3 .nei .chu li:nth-child(3) {
     border-right: 0px solid #e7e7e7;
 }
-
 .seck3 .nei .chu li:nth-child(4) {
     border-bottom: 0px solid #e7e7e7;
 }
-
 .seck3 .nei .chu li:nth-child(5) {
     border-bottom: 0px solid #e7e7e7;
 }
-
 .seck3 .nei .chu li:last-child {
     border-bottom: 0px solid #e7e7e7;
     border-right: 0px solid #e7e7e7;
@@ -1294,7 +1587,9 @@ aside ul li a {
     float: left;
     background: white;
 }
-
+.juan .juan-main .juan-right li:hover img{
+    transform: translateX(-8px);
+}
 .juan .juan-main .juan-right ul {
     width: 1000px;
     height: 215px;
@@ -1309,6 +1604,7 @@ aside ul li a {
     height: 195px;
     border-right: 1px solid #ccc;
     position: relative;
+
 }
 
 .juan .juan-main .juan-right ul li:last-child {
@@ -1381,6 +1677,7 @@ aside ul li a {
     top: 40px;
     right: 20px;
     overflow: hidden;
+    transition: all .2s;
 }
 
 .hunyan {
@@ -1462,7 +1759,9 @@ aside ul li a {
     height: 100%;
     float: left;
 }
-
+.enjoy-left li:hover img{
+    transform: translateX(-8px);
+}
 .enjoy-left li {
     width: 400px;
     height: 170px;
@@ -1470,6 +1769,7 @@ aside ul li a {
     margin-left: 10px;
     margin-top: 10px;
     position: relative;
+    overflow: hidden;
 }
 
 .enjoy-left li:nth-child(1) {
@@ -1537,7 +1837,8 @@ aside ul li a {
     height: 170px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 8px;
+    transition: all 1s;
 }
 
 .enjoy-zhibo {
@@ -1561,6 +1862,12 @@ aside ul li a {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+    transition: all 1s;
+}
+.enjoy-zhibo .tu a.active{
+    opacity: 1;
+    z-index: 1;
 }
 
 .enjoy-zhibo .tu a .live {
@@ -1591,10 +1898,7 @@ aside ul li a {
     float: left;
     width: 380px;
     height: 350px;
-}
 
-.enjoy-zhibo .tu a:first-child {
-    z-index: 1;
 }
 
 .enjoy-zhibo .jdzb {
@@ -1641,6 +1945,7 @@ aside ul li a {
     z-index: 5;
     color: white;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .enjoy-zhibo .next {
@@ -1657,6 +1962,7 @@ aside ul li a {
     z-index: 5;
     color: white;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .enjoy-zhibo .start {
@@ -1694,7 +2000,7 @@ aside ul li a {
     z-index: 999;
 }
 
-.lun3 .lun3s:first-child {
+.lun3 .lun3s.active {
     background: red;
 }
 
@@ -1718,17 +2024,19 @@ aside ul li a {
     height: 170px;
     position: relative;
 }
-
+.word ul li:hover img{
+    transform: translateX(-8px);
+}
 .word ul li a {
     width: 185px;
     height: 170px;
     display: block;
+    overflow: hidden;
 }
 
 .word ul li a img {
-    width: 185px;
-    height: 170px;
     display: block;
+    transition: all 1s;
 }
 
 .word ul li a .mi {
@@ -1869,17 +2177,30 @@ aside ul li a {
     float: left;
     margin: 10px;
 }
+.gu-middle .gu-left:hover img{
+    transform: translateX(-8px);
 
+}
+.gu-middle .gu-list li:hover img{
+    transform: translateX(-8px);
+
+}
+.gu-middle .gu-big li:hover img{
+    transform: translateX(-8px);
+
+}
 .gu-middle .gu-left a {
     width: 183px;
     height: 260px;
     display: block;
+    overflow: hidden;
 }
 
 .gu-middle .gu-left a img {
-    width: 183px;
+    /*width: 183px;*/
     height: 260px;
     display: block;
+    transition: all 1s;
 }
 
 .gu-middle .gu-list {
@@ -1952,6 +2273,7 @@ aside ul li a {
     position: absolute;
     bottom: 10px;
     right: 5px;
+    transition: all 1s;
 }
 
 .gu-middle .gu-big {
@@ -1980,6 +2302,7 @@ aside ul li a {
     width: 193px;
     height: 130px;
     float: left;
+    transition: all 1s;
 }
 
 .gu-ic {
@@ -1988,14 +2311,55 @@ aside ul li a {
     float: left;
     margin-top: 10px;
     margin-left: 10px;
+    overflow: hidden;
+    position: relative;
 }
-
+.computer .guu{
+    width: 100%;
+    height:420px;
+}
+.computer .gu-ic{
+    width: 100%;
+    margin-top: -37px;
+}
+.computer .gu-ic .ic-next{
+    right: 11px;
+}
+.gu-ic .ic-pre{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    margin: 0 auto;
+    height: 35px;
+    line-height: 35px;
+    color: #736b6f;
+    font-weight: 700;
+    background: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
+.gu-ic .ic-next{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 35px;
+    line-height: 35px;
+    color: #736b6f;
+    font-weight: 700;
+    background: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
 .gu-ic ul {
-    width: 570px;
+    width:1710px;
     height: 35px;
     float: left;
     display: flex;
     justify-content: space-around;
+    /*transition: all 1s;*/
 }
 
 .gu-ic ul li {
@@ -2003,6 +2367,7 @@ aside ul li a {
     height: 20px;
     border-right: 1px solid #dedfe0;
     margin-top: 7px;
+    padding:0 32px;
 
 }
 
@@ -2080,17 +2445,10 @@ aside ul li a {
     width: 1200px;
     overflow: hidden;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
     background: white;
 }
 
-.computer .lines {
-    width: 13px;
-    height: 450px;
-    border-right: 1px solid #ccc;
-    margin-top: 10px;
-}
+
 
 .com-header {
     width: 1200px;
@@ -2177,7 +2535,9 @@ aside ul li a {
 .eat a {
     border: 1px solid #f9d661;
 }
-
+.gg{
+    width: 100%;
+}
 .gu-middle .gu-list li a .pe {
     color: #eeb924;
 }
@@ -2250,7 +2610,7 @@ aside ul li a {
 
 .youxi {
     width: 390px;
-    height: 465px;
+    /*height: 465px;*/
 }
 
 .you-header {
@@ -2309,17 +2669,27 @@ aside ul li a {
     float: left;
     margin: 10px;
 }
-
+.you-middle .you-left:hover img{
+    transform: translateX(-8px);
+}
+.you-middle .you-list li:hover img{
+     transform: translateX(-8px);
+ }
+.you-middle .you-big li:hover img{
+    transform: translateX(-8px);
+}
 .you-middle .you-left a {
     width: 183px;
     height: 260px;
     display: block;
+    overflow: hidden;
 }
 
 .you-middle .you-left a img {
-    width: 183px;
+    /*width: 183px;*/
     height: 260px;
     display: block;
+    transition: all 1s;
 }
 
 .you-middle .you-list {
@@ -2382,6 +2752,7 @@ aside ul li a {
     position: absolute;
     bottom: 10px;
     right: 5px;
+    transition: all 1s;
 }
 
 .you-middle .you-big {
@@ -2410,6 +2781,7 @@ aside ul li a {
     width: 193px;
     height: 130px;
     float: left;
+    transition: all 1s;
 }
 
 .you-ic {
@@ -2418,10 +2790,39 @@ aside ul li a {
     float: left;
     margin-top: 10px;
     margin-left: 10px;
+    overflow: hidden;
+    position: relative;
 }
-
+.you-pre{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    margin:auto;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: black;
+    font-size: 12px;
+    cursor: pointer;
+}
+.you-next{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    margin:auto;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: black;
+    font-size: 12px;
+    cursor: pointer;
+}
 .you-ic ul {
-    width: 380px;
+    width: 1140px;
     height: 35px;
     float: left;
     display: flex;
@@ -2629,7 +3030,9 @@ aside ul li a {
     margin-left: 5px;
     margin-top: 5px;
 }
-
+.more ul li:hover{
+    border: 1px solid red;
+}
 .more ul li a {
     width: 230px;
     height: 315px;
@@ -2850,14 +3253,15 @@ footer .foo-header {
     background-position: -104px -217px;
 }
 .leftlan{
-    width: 34px;
-    height: 534px;
+    width: 0;
+    height: 0;
     position: fixed;
     left:50%;
-    bottom: 20px;
+    bottom: 50px;
     margin-left: -650px;
     background: #918888;
     z-index: 999;
+    overflow: hidden;
 }
 .leftlan ul{
     width: 34px;
@@ -2887,51 +3291,72 @@ footer .foo-header {
     margin-left: 3px;
     margin-top: 5px;
 }
-.leftlan ul li:first-child{
-    background: red;
-}
 .leftlan ul li:last-child{
     background:#5e4a4a;
 }
-.youlan{
-    width: 35px;
-    height: 216px;
-    background: rgb(122,110,110);
+.leftlan .u.active{
+    background:#c81623;
+}
+.youlan {
+    width: 30px;
+    height: auto;
     position: fixed;
-    left:50%;
-    bottom: 20px;
-    margin-left: 650px;
+    top: 50%;
+    right:0;
+    margin-top: -61px;
 }
-.youlan ul{
-    width: 35px;
-    height: 216px;
+.youlan img{
+    width: 20px;
+    height: 18px;
+    margin: 6px;
+
 }
-.youlan ul li{
-    width: 35px;
-    height: 35px;
-    border-bottom: 1px solid white;
-    position: relative;
-}
-.youlan ul li a{
-    display: block;
-}
-.youlan ul li .ju{
-    width: 62px;
-    height: 35px;
-    background: rgb(255,255,255);
+.youlan .math{
+    width: 60px;
+    height: 30px;
+    line-height:30px;
+    color: #fff;
+    text-align: center;
     position: absolute;
+    right:-100px;
     top: 0;
-    left: 35px;
+    background-color: #7a6e6e;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -webkit-transition: left .3s ease-in-out .1s;
+    -moz-transition: left .3s ease-in-out .1s;
+    transition: all 0.3s linear;
+}
+.youlan .index{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    background-color: #7a6e6e;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+.indexbottom img{
+    width: 19px;
+    height: 8px;
+}
+.indexbottom{
+    margin-top: 100px;
 }
 .searchs{
     width: 100%;
     height: 50px;
     border-bottom: 1px solid red;
     position: fixed;
-    top: 0;
+    top: -50px;
     left: 0;
     background: white;
-    display: none;
+    z-index: 999;
+    transition: all 1s;
+
 }
 .sear-main{
     width: 1200px;
