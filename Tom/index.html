@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/iconfont.css">
+
 </head>
 <body>
 <!-- 头部开始 -->
@@ -5459,5 +5460,24 @@
 <script src="javaScript/hover.js"></script>
 <script src="javaScript/demo.js"></script>
 <script src="javaScript/animate.js"></script>
+<script src="JQuery.js"></script>
+<script>
+    $(function(){
+        $(window).scroll(function () {
+            var st=$(this).scrollTop();
+            var sc=$(this).height();
+            $("img").filter(function () {
+//            console.log($("img"))
+                return $(this).attr("src")=="";
+            }).each(function (index,img) {
+                if((st+sc)>$(img).offset().top){
+                    $(img).attr("src",function () {
+                        return $(this).attr("data-src")
+                    })
+                }
+            })
 
+        })
+    })
+</script>
 </html>

@@ -442,6 +442,9 @@ header .he-main {
     color: #555;
     font-weight: 700;
 }
+.logo .logo-main .quick ul li:hover{
+    color: red;
+}
 
 .banner {
     width: 100%;

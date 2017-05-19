@@ -5,20 +5,17 @@ class Draw {
         this.width = option.width;
         this.style = option.style;
     }
-
     init() {
         this.cobj.strokeStyle = this.color;
         this.cobj.fillStyle = this.color;
         this.cobj.lineWidth = this.width;
     }
-
     rect(ox, oy, mx, my) {
         this.init()
         this.cobj.beginPath()
         this.cobj.rect(ox, oy, mx - ox, my - oy)
         this.cobj[this.style]();
     }
-
     line(ox, oy, mx, my) {
         this.init()
         this.cobj.beginPath()
@@ -26,7 +23,6 @@ class Draw {
         this.cobj.lineTo(mx, my)
         this.cobj.stroke()
     }
-
     circlein(ox, oy, mx, my) {
         this.init()
         // this.save()
@@ -37,7 +33,6 @@ class Draw {
         this.cobj[this.style]();
         // this.cobj.restore()
     }
-
     circleout(ox, oy, mx, my) {
         this.init()
         // this.save()
