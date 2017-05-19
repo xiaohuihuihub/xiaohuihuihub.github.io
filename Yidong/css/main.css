@@ -692,21 +692,19 @@ section {
     margin: 0 auto;
     margin-top: 10px;
 }
-
 .xilie {
     width: 1200px;
     height: 180px;
     background: #dfdfdf;
     padding: 10px 15px;
+    overflow: hidden;
 }
-
 .xilie .content {
     width: 1170px;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
-
 .xilie .content ul {
     width: 4720px;
     height: 100%;
@@ -714,7 +712,6 @@ section {
     margin-left: -1180px;
     transition: all 1s;
 }
-
 .xilie .content ul li {
     width: 285px;
     height: 160px;
@@ -722,31 +719,26 @@ section {
     float: left;
     margin: 0 10px 0 0;
 }
-
 .xilie .content ul li a {
     display: block;
 }
-
 .xilie .content ul li a h1 {
     color: rgb(51, 51, 51);
     font-size: 18px;
     padding: 0px 0px 0px 20px;
     margin: 0px;
 }
-
 .xilie .content ul li a h2 {
     color: rgb(51, 51, 51);
     font-size: 14px;
     padding: 6px 0px 0px 20px;
     margin: 0px;
 }
-
 .xilie .content ul li a img {
     float: right;
     width: 235px;
     height: 110px;
 }
-
 .xilie .con-pre {
     width: 28px;
     height: 35px;
@@ -758,7 +750,6 @@ section {
     margin: auto;
     cursor: pointer;
 }
-
 .xilie .con-next {
     width: 28px;
     height: 35px;
@@ -770,7 +761,6 @@ section {
     margin: auto;
     cursor: pointer;
 }
-
 .G {
     width: 1200px;
     height: 425px;
