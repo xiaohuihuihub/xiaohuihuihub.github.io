@@ -1,162 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-        html, body {
-            margin: 0;
-            height: 100%;
-            font-family: 微软雅黑;
-        }
-
-        .title {
-            width: 100%;
-            height: 100px;
-            background: pink;
-            line-height: 100px;
-            font-size: 20px;
-            font-weight: 400;
-            padding-left: 30px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .inputarea {
-            width: 100%;
-            height: 50px;
-        }
-
-        #text {
-            width: 300px;
-            height: 50px;
-            float: left;
-        }
-
-        #submit {
-            width: 150px;
-            height: 50px;
-            float: left;
-            background: green;
-            border: none;
-            cursor: pointer;
-        }
-
-        .show {
-            width: 100%;
-            background: #369;
-            flex-grow: 1; /* 把剩余空间占满 */
-            background: #eee;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        .container{
-            width: 1200px;
-            height: 600px;
-            margin: 0 auto;
-            /*background-image: url("todolist.jpg") no-repeat;*/
-        }
-        .plan {
-            width: 50%;
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap.css">
+	<style>
+	body,html,ul,li{
+		font-family: "微软雅黑";
+		height: 100%;
+		list-style: none;
+		}
+		.container{
+			background: #e3cb9e;
+			background-size: 100% 100%;
+			width: 1200px;
+			height: 100%;
+			margin: 0 auto;
+		}
+		.title{
+			color: #f96a59;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			font-size: 34px;
+		}
+		.inputarea{
+			width: 300px;
+			height: 20px;
+			float: left;
+			margin-left: 80px;
+		}
+		.inputarea #text{
+			width: 250px;
+			height: 30px;
+			float:left;
+			border: none;
+		}
+		.inputarea #submit{
+			width:50px;
+			height: 30px;
+			background: black;
+			border-radius: 5px; 
+			border: none;
+			color: white;
+			cursor: pointer;
+		}
+		.title1{
+			width: 100%;
+			height: 20px;
+			float: left;
+			margin-top: 50px;
+		}
+		.title1>div{
+			width: 50%;
+			float: left;
+			text-align: center;
+			line-height: 20px;
+		}
+		.show{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		
+		}
+		.show .plan{
+			width: 50%;
             height: 80%;
             overflow: auto;
-            background: #369;
             float: left;
-        }
-
-        .done {
-            width: 50%;
+		}
+		.show .plan input{
+			width: 40px;
+			height: 40px;
+			float: left;
+			margin-top: 9%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			
+		}
+		.show .plan label{
+			width: 40px;
+			height: 40px;
+			float: left;
+			margin-top: 9%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius:  45px;
+			background: white;
+			border: 5px solid #e85140;
+		}
+		.show .plan span{
+			display: block;
+		    width: 112px;
+		    height: 115px;
+		    margin: 0 auto;
+		    /* padding: 10px 30px; */
+		    text-align: center;
+		    line-height: 27px;
+		    float: left;
+		    margin-left: 27%;
+		    margin-top: 20px;
+		}
+		.plan li{
+			border-bottom: 1px dashed #333;
+			background: url('images/todilist_03.png') no-repeat;
+			text-align: center;
+    		line-height: 47px;
+    		overflow: hidden;
+    		margin-top: 20px;
+    		color: #f45e55;
+    		position: relative;
+		}
+		.done li{
+			border-bottom: 1px dashed #333;
+			background: url('images/todilist_10.png') no-repeat;
+			text-align: center;
+    		line-height: 47px;
+    		overflow: hidden;
+    		margin-top: 20px;
+    		color: : #8b8cbc;
+    		 position: relative;
+		}
+		.show .done{
+			width: 50%;
             height: 80%;
-            float: right;
             overflow: auto;
-            background: gray;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        ul li input {
-            float: left;
-            width: 30px;
-            height: 30px;
-            margin: 0;
-        }
-
-        ul li span {
-            height: auto;
-            border: 1px solid black;
-            line-height: 30px;
-            color: #fff;
-            padding-left: 30px;
-        }
-
-        ul li time {
-            width: 160px;
-            height: 30px;
             float: right;
-            background: red;
-            text-align: center;
-            line-height: 30px;
-            color: #fff;
-            background: #f33;
-        }
 
-        .contenttitle {
-            width: 50%;
-            height: 20px;
-            float: left;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            color: red;
-
-        }
-
-        .title1 {
-            width: 100%;
-            height: auto
-        }
-    </style>
+		}
+		.show .done input{
+			width: 40px;
+			height: 40px;
+			margin-top: 8%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius:  45px;
+			opacity: 0;
+		}
+		.show .done label{
+			width: 40px;
+			height: 40px;
+			float: left;
+			margin-top: 8%;
+			position: absolute;
+			top:0;
+			left: 0;
+			border-radius:  45px;
+			background: white;
+			border: 5px solid #55558b;
+		}
+		.show .done span{
+			display: block;
+    		width: 112px;
+    		height: 115px;
+   			margin: 0 auto;
+    		/* padding: 10px 30px; */
+    		text-align: center;
+    		line-height: 27px;
+    		float: left;
+    		margin-left: 20%;
+   			margin-top: 20px;
+    		
+		}
+		time{
+			display: block;
+			width: 100%;
+			text-align: right;
+		}
+	</style>
 </head>
 <body>
-<div class="container">
-    <div class="title"></div>
-    <div class="inputarea">
-        <input type="text" id="text">
-        <input type="button" id="submit" value="提交">
+	<div class="container">
+		<div class="title">Title</div>
+		 <div class="inputarea">
+	        <input type="text" id="text">
+	        <input type="button" id="submit" value="提交">
+    	</div>
+    	 <div class="title1">
+        	<div class="contenttitle">未完成</div>
+        	<div class="contenttitle">已完成</div>
+    	</div>
+    	<div class="show">
+	        <ul class="plan">
+	            <li>
+	                <input type="checkbox" class="upload">
+	                <label for="upload"></label>	
+	                <span contenteditable="true">1233dddddddddddddddddddddddd</span>
+	                <time>2017/5/3</time>
+	            </li>
+	        </ul>
+	        <ul class="done">
+	            <li>
+	                <input type="checkbox">
+	                 <label for="upload"></label>	
+	                <span contenteditable="true">1233</span>
+	                <time>2017/5/3</time>
+	            </li>
+	        </ul>
     </div>
-    <div class="title1">
-        <div class="contenttitle">未完成</div>
-        <div class="contenttitle">已完成</div>
-    </div>
-
-    <div class="show">
-        <ul class="plan">
-            <li>
-                <input type="checkbox">
-                <span contenteditable="true">1233</span>
-                <time>2017/5/3</time>
-            </li>
-        </ul>
-        <ul class="done">
-            <li>
-                <input type="checkbox">
-                <span contenteditable="true">1233</span>
-                <time>2017/5/3</time>
-            </li>
-        </ul>
-    </div>
-</div>
+	</div>
 </body>
 <script>
+var checkbox=document.querySelector(".upload")
+checkbox.background="red";
     var text = document.querySelector("#text")
     var submit = document.querySelector("#submit")
     var plan = document.querySelector(".plan")
@@ -236,4 +286,4 @@
 
     }
 </script>
-<html>
+</html>
