@@ -1006,9 +1006,9 @@ aside .lis .hea a{
     float: left;
 }
 .limited-m .lim-c .bo .ul{
-    width: 3000px;
+    width: 4000px;
     overflow: hidden;
-
+    margin-left: -1000px;
 }
 
 .z-pre{
@@ -2497,60 +2497,50 @@ aside .lis .hea a{
     cursor: pointer;
 }
 .gu-ic ul {
-    width:1710px;
+    width:4560px;
     height: 35px;
     float: left;
-    display: flex;
-    justify-content: space-around;
     /*transition: all 1s;*/
+    margin-left: -1140px;
 }
-
 .gu-ic ul li {
     width: 95px;
     height: 20px;
+    float: left;
     border-right: 1px solid #dedfe0;
+    padding: 0 12px;
     margin-top: 7px;
-    padding:0 32px;
-
 }
-
 .gu-ic ul li:last-child {
     border-right: 0px solid #dedfe0;
 }
-
 .gu-ic ul li a {
     width: 70px;
     height: 35px;
     display: block;
     margin-left: 10px;
 }
-
 .gu-ic ul li a img {
     width: 70px;
     height: 35px;
     float: left;
     margin-top: -7px;
 }
-
 .beautiful {
     background-image: linear-gradient(90deg, #cd375e, #c1314d);
     background: #cd375e;
 }
-
 .jiadianguan {
     background-image: linear-gradient(90deg, #78538e, #674083);
     background: #78538e;
 }
-
 .gaoji {
     background-image: linear-gradient(90deg, #5e6c90, #4c5e8c);
     background: #5e6c90;
 }
-
 .gu a {
     border: 1px solid #c187af;
 }
-
 .mei a {
     border: 1px solid #de7b95;
 }
@@ -2965,16 +2955,16 @@ aside .lis .hea a{
     cursor: pointer;
 }
 .you-ic ul {
-    width: 1140px;
+    width: 1520px;
     height: 35px;
     float: left;
-    display: flex;
-    justify-content: space-around;
+    margin-left: -380px;
 }
 
 .you-ic ul li {
     width: 95px;
     height: 20px;
+    float: left;
     border-right: 1px solid #dedfe0;
     margin-top: 7px;
 

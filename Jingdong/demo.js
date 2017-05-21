@@ -132,41 +132,48 @@ function banner(lun,banli,box,pre,next) {
     })
     //小图函数
     function tranlate(val,pres,nexts,i) {
-        var num=0;
+        var num=1;
         var flag=true;
         function move() {
-            val.css("transition","all 1s linear");
+            val.css("transition","all 1s");
             num++;
             val.css("margin-left",-num*i+"px");
-            if(num==3){
-                val.css("margin-left",0);
-                val.css("transition","none");
-                num=0;
-            }
 
-            // val.css("transition","all 1s")
-     flag=false;
         }
-        pres.click(function () {
-            num-=2;
-            if(num==-2){
-                num=0
+        val.on("transitionend",function () {
+            if(num==3){
                 val.css("transition","none");
+                num=1;
+                val.css("margin-left",-num*i+"px");
+            }else if(num==0){
+                val.css("transition","none");
+                num=2;
+                val.css("margin-left",-num*i+"px");
             }
-            move()
+            flag=true;
+        })
+        pres.click(function () {
+           if(flag){
+               flag=false;
+               num-=2;
+               move()
+           }
         })
         nexts.click(function () {
-            move()
+            if(flag){
+                flag=false;
+                move()
+            }
         })
     }
     tranlate($(".g1 .brands"),$(".g1 .ic-pre"),$(".g1 .ic-next"),570)
     tranlate($(".g2 .brands"),$(".g2 .ic-pre"),$(".g2 .ic-next"),570)
     tranlate($(".g3 .brands"),$(".g3 .ic-pre"),$(".g3 .ic-next"),570)
     tranlate($(".g4 .brands"),$(".g4 .ic-pre"),$(".g4 .ic-next"),570)
-    tranlate($(".g5 .brands"),$(".g5 .ic-pre"),$(".g5 .ic-next"),1200)
+    tranlate($(".g5 .brands"),$(".g5 .ic-pre"),$(".g5 .ic-next"),1140)
     tranlate($(".g6 .brands"),$(".g6 .ic-pre"),$(".g6 .ic-next"),570)
     tranlate($(".g7 .brands"),$(".g7 .ic-pre"),$(".g7 .ic-next"),570)
-    tranlate($(".g8 .brands"),$(".g8 .ic-pre"),$(".g8 .ic-next"),1200)
+    tranlate($(".g8 .brands"),$(".g8 .ic-pre"),$(".g8 .ic-next"),1140)
     tranlate($(".g9 .brands"),$(".g9 .ic-pre"),$(".g9 .ic-next"),570)
     tranlate($(".g10 .brands"),$(".g10 .ic-pre"),$(".g10 .ic-next"),570)
     tranlate($(".g11 .brands"),$(".g11 .ic-pre"),$(".g11 .ic-next"),570)
@@ -255,13 +262,10 @@ function banner(lun,banli,box,pre,next) {
         })
     })
     //zj
-    var nu=0;
+    var nu=1;
     function z() {
+        $(".lim-c .ul").css("transition","all 1s")
         nu++;
-        if(nu==-2){
-            nu=0;
-        }
-        $(".lim-c .ul").css("transition","all 3s")
         $(".bo .ul").css("margin-left",-nu*1000+"px")
     }
     $(".lim-c").hover(function () {
@@ -271,18 +275,30 @@ function banner(lun,banli,box,pre,next) {
         $(".y-next").css("opacity","0")
         $(".z-pre").css("opacity","0")
     })
+    $(".bo .ul").on("transitionend",function () {
+        if (nu== 3) {
+            $(".bo .ul").css("transition","none")
+            nu =1;
+            $(".bo .ul").css("marginLeft",-1000 *nu + "px")
+        }else if(nu==0){
+            $(".bo .ul").css("transition","none")
+            nu=2;
+            $(".bo .ul").css("marginLeft",-1000 *nu + "px")
+        }
+        flag1=true;
+    })
+    var flag1=true;
     $(".y-next").click(function () {
-        z()
+        if(flag1){
+            flag1=false;
+            z()
+        }
     })
     $(".z-pre").click(function () {
-        nu-=2;
-        z()
-    })
-    $(".bo .ul").on("transitionend",function () {
-        if(nu==2){
-            nu=0;
-            $(".bo .ul").css("margin-left",-nu*1000+"px")
-            $(".bo .ul").css("transition","none")
+        if(flag1){
+            flag1=false;
+            nu -= 2;
+            z()
         }
     })
 })//结束
