@@ -20,4 +20,6 @@ $(function () {
     },function () {
         t=setInterval(move,2000);
     })
+    //按需加载
+    
 })

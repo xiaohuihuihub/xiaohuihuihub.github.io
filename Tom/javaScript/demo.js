@@ -265,6 +265,7 @@ saoma.addEventListener("animationend",function () {
 //二级页面效果
 var erjili=document.querySelectorAll("aside>ul>li");
 var innerCon=document.querySelectorAll(".inner-con")
+
 var inn=0;
 erjili.forEach(function (v,i) {
     v.onmouseover=function () {
@@ -272,10 +273,9 @@ erjili.forEach(function (v,i) {
         innerCon[i].style.display="block"
     }
     v.onmouseout=function () {
-
         innerCon[i].style.display="none"
     }
-
-
 })
+
+console.log(ban)
 

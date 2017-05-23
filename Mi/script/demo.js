@@ -7,7 +7,6 @@ var youjian = document.querySelector(".yjs")
 var obj = img[0]
 var obj1 = lun[0]
 Array.from(lun).forEach(function (value, index) {
-
     value.onmouseover = function () {
         num = index;
         obj1.style.background = "black"
@@ -81,7 +80,7 @@ $(".nav-right ul>.li1").each(function (i,v) {
 
             $(this).hide();
             // isShow=false;
-       
+
 
     });
 })
